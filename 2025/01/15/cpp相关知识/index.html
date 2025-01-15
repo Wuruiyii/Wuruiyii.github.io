@@ -4,15 +4,21 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo</title>
+  <title>cpp相关知识 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="cpp language 语法vector(动态数组)1.在使用vector时，要使用相应的头文件 1#include&lt;vector&gt;  2.创建数组 12345678910111213141516定义：vector&lt;数据类型&gt; v;v.resize(10);for(int i&#x3D; 9&#x3D;0;i &lt; 10;i++)    v[i] &#x3D; i;for(int i &#x3D;0;i &amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cpp相关知识">
+<meta property="og:url" content="http://example.com/2025/01/15/cpp%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="cpp language 语法vector(动态数组)1.在使用vector时，要使用相应的头文件 1#include&lt;vector&gt;  2.创建数组 12345678910111213141516定义：vector&lt;数据类型&gt; v;v.resize(10);for(int i&#x3D; 9&#x3D;0;i &lt; 10;i++)    v[i] &#x3D; i;for(int i &#x3D;0;i &amp;">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:\Users\15099\AppData\Roaming\Typora\typora-user-images\image-20250111204645805.png">
+<meta property="article:published_time" content="2025-01-15T14:16:35.000Z">
+<meta property="article:modified_time" content="2025-01-15T14:17:21.207Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\15099\AppData\Roaming\Typora\typora-user-images\image-20250111204645805.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -67,78 +73,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-如何基于GitHub和hexo搭建个人博客" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/01/15/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8EGitHub%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
-  <time class="dt-published" datetime="2025-01-15T14:37:06.000Z" itemprop="datePublished">2025-01-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/01/15/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8EGitHub%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">如何基于GitHub和hexo搭建个人博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>如何基于github搭建自己的个人博客：</p>
-<p>​     本人也是新手小白一枚，看到了很厉害的保姆级博客，然后在各方面的帮助下，成功搭建了属于自己的博客，收获满满，决心把自己踩过的坑和遇到的问题分享出来，可以供大家进行参考。本篇文章也是基于以下教程，参考并进行相应的补充和拓展。</p>
-<h2 id="1-前置准备"><a href="#1-前置准备" class="headerlink" title="1.前置准备"></a>1.前置准备</h2><p>1.首先要安装好Git ,下面是官方网址,大家可以自行去安装</p>
-<p>安装完毕，鼠标右键，看到 Git Bash Here 就显示已经安装好了Git ，可以使用相关命令进行操作</p>
-<img src="C:\Users\15099\Pictures\Screenshots\屏幕截图 2025-01-14 231505.png" alt="屏幕截图 2025-01-14 231505" style="zoom: 50%;" />
-
-<p>关于Git的常见命令，可以参考下面的文章</p>
-<p>然后，记得去github官方网站注册自己的个人账号</p>
-<p>2.安装node.js </p>
-<p>安装好后，可以对安装成功进行检验 </p>
-<p>输入 <strong>node -v</strong> 命令</p>
-<img src="C:\Users\15099\AppData\Roaming\Typora\typora-user-images\image-20250114232516667.png" alt="image-20250114232516667" style="zoom: 50%;" />
-
-<p>3.安装Hexo</p>
-<p>安装命令：<strong>npm install hexo -g</strong></p>
-<p><strong>注意</strong>：这里有可能出现操作失败的可能，类似下面这样</p>
-<p><img src="C:\Users\15099\Desktop\微信图片_20250114233356.png" alt="微信图片_20250114233356"></p>
-<p>这是因为权限问题，可以尝试以下方法：</p>
-<p>（1）把鼠标放在开始上，鼠标右键，选择终端管理员进行操作</p>
-<p>（2）如果还是无法下载，那就再试试下面的办法</p>
-<p>尝试以下步骤：<br>更改执行策略：在PowerShell中输入以下命令以更改执行策略：</p>
-<p>Set-ExecutionPolicy RemoteSigned</p>
-<p>这将允许远程签名的脚本运行。<br>重新运行命令：再次尝试运行你的npm命令：</p>
-<p>npm install hexo -g</p>
-<p>![屏幕截图 2025-01-13 234632](C:\Users\15099\Pictures\Screenshots\屏幕截图 2025-01-13 234632.png)</p>
-<p>当时我的采取了第二步以后，就可以下载了，最后输入<strong>hexo -v</strong>的命令，可以看到安装成功</p>
-<img src="C:\Users\15099\Desktop\屏幕截图 2025-01-13 234700(1).png" alt="屏幕截图 2025-01-13 234700(1)" style="zoom:50%;" />
-
-<p>4.安装hexo依赖</p>
-<p>命令：<strong>npm install <code>--</code>save hexo-deployer-git</strong></p>
-<img src="C:\Users\15099\Pictures\Screenshots\屏幕截图 2025-01-13 234700.png" alt="屏幕截图 2025-01-13 234700" style="zoom:50%;" />
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/01/15/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8EGitHub%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="cm5y0ce3r00026k89dtai4nnr" data-title="如何基于GitHub和hexo搭建个人博客" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-cpp相关知识" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-cpp相关知识" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2025/01/15/cpp%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/" class="article-date">
   <time class="dt-published" datetime="2025-01-15T14:16:35.000Z" itemprop="datePublished">2025-01-15</time>
@@ -151,8 +86,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/01/15/cpp%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">cpp相关知识</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      cpp相关知识
     </h1>
   
 
@@ -242,200 +177,28 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-前端-学习记录" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/01/15/%E5%89%8D%E7%AB%AF-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="article-date">
-  <time class="dt-published" datetime="2025-01-15T02:53:19.000Z" itemprop="datePublished">2025-01-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2025/01/15/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8EGitHub%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
+          如何基于GitHub和hexo搭建个人博客
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/01/15/%E5%89%8D%E7%AB%AF-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">前端-学习记录</a>
-    </h1>
   
+    <a href="/2025/01/15/%E5%89%8D%E7%AB%AF-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">前端-学习记录</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>ES 全称 EcmaScript ,是脚本语言的规范，而平时经常编写的 JavaScipt ,是EcmaScript 的一种实现</p>
-<p>ES新特性其实是指 javaScript 的新特性</p>
-<p>ECMAScript是由Ecma国际通过ECMA-262标准化的 <strong>脚本程序设计语言</strong></p>
-<h2 id="let"><a href="#let" class="headerlink" title="let"></a>let</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//声明变量</span></span><br><span class="line"><span class="keyword">let</span> a;</span><br><span class="line"><span class="keyword">let</span> b,c,d;</span><br><span class="line"><span class="keyword">let</span> e = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">let</span> f = <span class="number">521</span>,g = <span class="string">&#x27;love&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>注意：1.变量不能重复声明</p>
-<p>​            2.块级作用域，只在作用域中有效，外面则读取不到</p>
-<p>​            3.不存在代码提升：使用原来的 var 可以将未被赋值的变量打印为 undefined,但是 let 则不允许，未被初始化不允许进行打印</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>; <span class="comment">//结果是undefined</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="number">10</span>;<span class="comment">//此时是报错</span></span><br></pre></td></tr></table></figure>
-
-<p>​           4.不影响作用域链</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   <span class="keyword">let</span> school = <span class="string">&#x27;ABC&#x27;</span>;</span><br><span class="line">   <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)</span><br><span class="line">   &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(school);  <span class="comment">//此时可以正常打印</span></span><br><span class="line">   &#125;</span><br><span class="line">   <span class="title function_">fn</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>实践案例</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>点击 DIV 换色<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.item</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">border</span>: solid <span class="number">1px</span> <span class="built_in">rgb</span>(<span class="number">42</span>, <span class="number">156</span>, <span class="number">156</span>);</span></span><br><span class="line"><span class="language-css">            <span class="attribute">float</span>: left;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin-right</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">&quot;page-header&quot;</span>&gt;</span>点击切换颜色<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="comment">//获取div元素对象</span></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">let</span> items = <span class="variable language_">document</span>.<span class="title function_">getElementsByClassName</span>(<span class="string">&#x27;item&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="comment">//遍历并绑定事件</span></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;items.<span class="property">length</span>;i++)&#123;  <span class="comment">//以let代替var,则可以实现相应的点击即切换功能</span></span></span><br><span class="line"><span class="language-javascript">            items[i].<span class="property">onclick</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="comment">//修改当前元素的背景颜色</span></span></span><br><span class="line"><span class="language-javascript">                <span class="comment">// this.style.background = &#x27;pink&#x27;;</span></span></span><br><span class="line"><span class="language-javascript">                items[i].<span class="property">style</span>.<span class="property">background</span> = <span class="string">&#x27;pink&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">            &#125;</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">        </span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><p>注意：1.一定要赋初始值</p>
-<p>​           2.（潜规则）一般常量使用大写</p>
-<p>​           3.常量的值无法修改</p>
-<p>​           4.块级作用域，只能在相应的作用域中使用，离开则无法使用</p>
-<p>​           5.对于数组和对象的元素的修改，不算做对常量的修改，不会报错</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="variable constant_">TEAM</span> =[<span class="string">&#x27;NIHAO&#x27;</span>,<span class="string">&#x27;NI&#x27;</span>,<span class="string">&#x27;HAO&#x27;</span>,<span class="string">&#x27;YES&#x27;</span>];</span><br><span class="line"><span class="variable constant_">TEAM</span>.<span class="title function_">push</span>(<span class="string">&#x27;Meiko&#x27;</span>);  <span class="comment">//不会报错</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="变量的解构赋值"><a href="#变量的解构赋值" class="headerlink" title="变量的解构赋值"></a>变量的解构赋值</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>变量的解构赋值<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="comment">//ES6 允许按照一定模式从数组和对象中提取值，对变量进行赋值，这被称为解构赋值。</span></span></span><br><span class="line"><span class="language-javascript">    </span></span><br><span class="line"><span class="language-javascript">  <span class="comment">//1. 数组的结构</span></span></span><br><span class="line"><span class="language-javascript">   <span class="keyword">const</span> <span class="variable constant_">F4</span> = [<span class="string">&#x27;小沈阳&#x27;</span>,<span class="string">&#x27;刘能&#x27;</span>,<span class="string">&#x27;赵四&#x27;</span>,<span class="string">&#x27;宋小宝&#x27;</span>];</span></span><br><span class="line"><span class="language-javascript">   <span class="keyword">let</span> [xiao, liu, zhao, song] = <span class="variable constant_">F4</span>;</span></span><br><span class="line"><span class="language-javascript">   <span class="variable language_">console</span>.<span class="title function_">log</span>(xiao);  <span class="comment">//小沈阳</span></span></span><br><span class="line"><span class="language-javascript">   <span class="variable language_">console</span>.<span class="title function_">log</span>(liu);   <span class="comment">//刘能</span></span></span><br><span class="line"><span class="language-javascript">   <span class="variable language_">console</span>.<span class="title function_">log</span>(zhao);  <span class="comment">//赵四</span></span></span><br><span class="line"><span class="language-javascript">   <span class="variable language_">console</span>.<span class="title function_">log</span>(song);  <span class="comment">//宋小宝</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="comment">//2. 对象的解构</span></span></span><br><span class="line"><span class="language-javascript">   <span class="keyword">const</span> zhao = &#123;</span></span><br><span class="line"><span class="language-javascript">       <span class="attr">name</span>: <span class="string">&#x27;赵本山&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">       <span class="attr">age</span>: <span class="string">&#x27;不详&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">       <span class="attr">xiaopin</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">           <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;我可以演小品&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">       &#125;</span></span><br><span class="line"><span class="language-javascript">   &#125;;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">   <span class="keyword">let</span> &#123;name, age, xiaopin&#125; = zhao;</span></span><br><span class="line"><span class="language-javascript">   <span class="variable language_">console</span>.<span class="title function_">log</span>(name); </span></span><br><span class="line"><span class="language-javascript">   <span class="variable language_">console</span>.<span class="title function_">log</span>(age);</span></span><br><span class="line"><span class="language-javascript">   <span class="variable language_">console</span>.<span class="title function_">log</span>(xiaopin);</span></span><br><span class="line"><span class="language-javascript">   <span class="title function_">xiaopin</span>(); <span class="comment">//我可以演小品</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="Figma-相关知识（上）"><a href="#Figma-相关知识（上）" class="headerlink" title="Figma 相关知识（上）"></a>Figma 相关知识（上）</h1><p>学习来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV19TDGYWEp7/?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV19TDGYWEp7/?spm_id_from=333.337.search-card.all.click</a></p>
-<p> 简介：Figma是一款UI设计软件</p>
-<p>UI设计：User Interface Design，即用户界面设计</p>
-<h2 id="主要工具"><a href="#主要工具" class="headerlink" title="主要工具"></a>主要工具</h2><h3 id="软件内部工具栏"><a href="#软件内部工具栏" class="headerlink" title="软件内部工具栏"></a>软件内部工具栏</h3><img src="C:\Users\15099\AppData\Roaming\Typora\typora-user-images\image-20250115160436889.png" alt="image-20250115160436889" style="zoom:50%;" />
-
-<h3 id="侧边栏"><a href="#侧边栏" class="headerlink" title="侧边栏"></a>侧边栏</h3><p><img src="C:\Users\15099\AppData\Roaming\Typora\typora-user-images\image-20250115161054338.png" alt="image-20250115161054338"></p>
-<h3 id="控制面板布局"><a href="#控制面板布局" class="headerlink" title="控制面板布局"></a>控制面板布局</h3><p><img src="C:\Users\15099\AppData\Roaming\Typora\typora-user-images\image-20250115161244659.png" alt="image-20250115161244659"></p>
-<h2 id="编组类型和图层"><a href="#编组类型和图层" class="headerlink" title="编组类型和图层"></a>编组类型和图层</h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><p><img src="C:\Users\15099\AppData\Roaming\Typora\typora-user-images\image-20250115164756071.png" alt="image-20250115164756071"></p>
-<p><img src="C:\Users\15099\AppData\Roaming\Typora\typora-user-images\image-20250115165210499.png" alt="image-20250115165210499"></p>
-<p><img src="C:\Users\15099\AppData\Roaming\Typora\typora-user-images\image-20250115165654057.png" alt="image-20250115165654057"></p>
-<p><img src="C:\Users\15099\AppData\Roaming\Typora\typora-user-images\image-20250115165729538.png" alt="image-20250115165729538"></p>
-<h3 id="图层的编辑"><a href="#图层的编辑" class="headerlink" title="图层的编辑"></a>图层的编辑</h3><p><img src="C:\Users\15099\AppData\Roaming\Typora\typora-user-images\image-20250115165859715.png" alt="image-20250115165859715"></p>
-<h2 id="实用工具"><a href="#实用工具" class="headerlink" title="实用工具"></a>实用工具</h2><p>​                   1.按住alt键，可以识别不同图层之间的距离</p>
-<p>​                   2.摁住ctrl键，可以选择任意层级进行编辑修改</p>
-<h2 id="蒙版设置"><a href="#蒙版设置" class="headerlink" title="蒙版设置"></a>蒙版设置</h2><p>1.粘帖一张图片</p>
-<p>2.选择适合大小的框架，并将相关内容创立一个Group</p>
-<p>3.鼠标右键use as mask，则形成了蒙版，后续的对于图片的剪裁都会比较方便</p>
-<img src="C:\Users\15099\AppData\Roaming\Typora\typora-user-images\image-20250115182158141.png" alt="image-20250115182158141" style="zoom:50%;" />
-
-<h2 id="矢量图形"><a href="#矢量图形" class="headerlink" title="矢量图形"></a>矢量图形</h2><p>位图&#x2F;点阵图：记录像素点的色彩拼凑出图形</p>
-<p>矢量图形：使用数字公式来描述图形</p>
-<p>view 中 Pixel preview &#x2F; Pixel grid 在画一些比较精细的地方可以用得到</p>
-<img src="C:\Users\15099\AppData\Roaming\Typora\typora-user-images\image-20250115211318369.png" alt="image-20250115211318369" style="zoom:50%;" />
-
-<p>矢量图形的组成：点 - 线 - 面</p>
-<p>锚点之间可以形成线段，通过锚点控制杆来调节曲线，称作 “贝塞尔曲线”</p>
-<p>修改矢量图形：双击选中，进行编辑</p>
-<p><strong>注意</strong>：矢量图形的边缘才是它真正的部分，而其他的填充都是额外加进去的，鼠标右键outline stroke，可以将填充图层单独抽离</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/01/15/%E5%89%8D%E7%AB%AF-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" data-id="cm5y0ce3q00016k899y5ecvs9" data-title="前端-学习记录" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-wry-first-blog" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/01/13/wry-first-blog/" class="article-date">
-  <time class="dt-published" datetime="2025-01-13T15:14:18.000Z" itemprop="datePublished">2025-01-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/01/13/wry-first-blog/">&#39;wry-first-blog&#39;</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p> 这是我的第一个博客 ！</p>
-<p>建立博客的目的是 将自己学习过程中积累的知识存档，分享一些自己的学习感悟</p>
-<p>未来希望自己可以不断成长</p>
-        
-          <p class="article-more-link">
-            <a href="/2025/01/13/wry-first-blog/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/01/13/wry-first-blog/" data-id="cm5v75xpf0000rc89htyo3est" data-title="&#39;wry-first-blog&#39;" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/01/13/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2025-01-13T13:39:13.132Z" itemprop="datePublished">2025-01-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/01/13/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/01/13/hello-world/" data-id="cm5v3dhcr00009089c2sahr0z" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
