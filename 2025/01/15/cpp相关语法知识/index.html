@@ -9,30 +9,30 @@
   <meta name="description" content="cpp language 语法总览导航-思维导图 vector(动态数组)1.在使用vector时，要使用相应的头文件 1#include&lt;vector&gt;  2.创建数组 12345678910111213141516定义：vector&lt;数据类型&gt; v;v.resize(10);for(int i&#x3D; 9&#x3D;0;i &lt; 10;i++)    v[i] &#x3D; i;for(in">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cpp相关语法知识">
-<meta property="og:url" content="https://wuruiyii.github.io/2025/01/15/cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/index.html">
+<meta property="og:url" content="https://wuruiyii.github.io/blog/2025/01/15/cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="RuiyiWu&#39;s Blog">
 <meta property="og:description" content="cpp language 语法总览导航-思维导图 vector(动态数组)1.在使用vector时，要使用相应的头文件 1#include&lt;vector&gt;  2.创建数组 12345678910111213141516定义：vector&lt;数据类型&gt; v;v.resize(10);for(int i&#x3D; 9&#x3D;0;i &lt; 10;i++)    v[i] &#x3D; i;for(in">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://wuruiyii.github.io/.io//cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86%5Ccpp.png">
-<meta property="og:image" content="https://wuruiyii.github.io/.io//cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86%5Cimage-20250111204645805.png">
+<meta property="og:image" content="https://wuruiyii.github.io/blog/.io//cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86%5Ccpp.png">
+<meta property="og:image" content="https://wuruiyii.github.io/blog/.io//cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86%5Cimage-20250111204645805.png">
 <meta property="article:published_time" content="2025-01-15T15:42:51.000Z">
 <meta property="article:modified_time" content="2025-01-15T16:08:07.528Z">
 <meta property="article:author" content="Wu Rui Yi">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://wuruiyii.github.io/.io//cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86%5Ccpp.png">
+<meta name="twitter:image" content="https://wuruiyii.github.io/blog/.io//cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86%5Ccpp.png">
   
-    <link rel="alternate" href="/atom.xml" title="RuiyiWu's Blog" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="alternate" href="/blog/atom.xml" title="RuiyiWu's Blog" type="application/atom+xml">
   
   
+    <link rel="shortcut icon" href="/blog/favicon.png">
   
-<link rel="stylesheet" href="/css/style.css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
 
   
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.min.css">
 
   
   
@@ -46,11 +46,11 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">RuiyiWu&#39;s Blog</a>
+        <a href="/blog/" id="logo">RuiyiWu&#39;s Blog</a>
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">Hello,welcome to my world!</a>
+          <a href="/blog/" id="subtitle">Hello,welcome to my world!</a>
         </h2>
       
     </div>
@@ -58,20 +58,20 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
         
-          <a class="main-nav-link" href="/">Home</a>
+          <a class="main-nav-link" href="/blog/">Home</a>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
         
       </nav>
       <nav id="sub-nav">
         
         
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+          <a class="nav-icon" href="/blog/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
         
         <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://wuruiyii.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://Wuruiyii.github.io/blog"></form>
       </div>
     </div>
   </div>
@@ -80,7 +80,7 @@
       <div class="outer">
         <section id="main"><article id="post-cpp相关语法知识" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2025/01/15/cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/" class="article-date">
+    <a href="/blog/2025/01/15/cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/" class="article-date">
   <time class="dt-published" datetime="2025-01-15T15:42:51.000Z" itemprop="datePublished">2025-01-15</time>
 </a>
     
@@ -100,7 +100,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="cpp-language-语法"><a href="#cpp-language-语法" class="headerlink" title="cpp language 语法"></a>cpp language 语法</h1><h1 id="总览导航-思维导图"><a href="#总览导航-思维导图" class="headerlink" title="总览导航-思维导图"></a>总览导航-思维导图</h1><p><img src="/.io//cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86%5Ccpp.png" alt="cpp"></p>
+        <h1 id="cpp-language-语法"><a href="#cpp-language-语法" class="headerlink" title="cpp language 语法"></a>cpp language 语法</h1><h1 id="总览导航-思维导图"><a href="#总览导航-思维导图" class="headerlink" title="总览导航-思维导图"></a>总览导航-思维导图</h1><p><img src="/blog/.io//cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86%5Ccpp.png" alt="cpp"></p>
 <h2 id="vector-动态数组"><a href="#vector-动态数组" class="headerlink" title="vector(动态数组)"></a>vector(动态数组)</h2><p>1.在使用vector时，要使用相应的头文件</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br></pre></td></tr></table></figure>
 
@@ -142,7 +142,7 @@
 <p>2.使用</p>
 <p>   如果对于对于排序没有相应的要求，可以使用这两个来减少复杂度，防止运行超时</p>
 <p> 注意：但是在输出的时候，尽管是无序的，但是却不是输入的顺序</p>
-<p><img src="/.io//cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86%5Cimage-20250111204645805.png" alt="image-20250111204645805"></p>
+<p><img src="/blog/.io//cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86%5Cimage-20250111204645805.png" alt="image-20250111204645805"></p>
 <h2 id="bitset（位运算）"><a href="#bitset（位运算）" class="headerlink" title="bitset（位运算）"></a>bitset（位运算）</h2><p>1.在使用时，要使用相应的头文件</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bitset&gt;</span></span></span><br></pre></td></tr></table></figure>
 
@@ -177,7 +177,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wuruiyii.github.io/2025/01/15/cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/" data-id="cm5yqvd3k0000vw89b1pj51kz" data-title="cpp相关语法知识" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://wuruiyii.github.io/blog/2025/01/15/cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/" data-id="cm5yreqko0000vk895xtw7x2e" data-title="cpp相关语法知识" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -188,7 +188,7 @@
 <nav id="article-nav">
   
   
-    <a href="/2025/01/15/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8EGitHub%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/2025/01/15/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8EGitHub%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">如何基于GitHub和hexo搭建个人博客</div>
     </a>
@@ -215,7 +215,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">January 2025</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2025/01/">January 2025</a></li></ul>
     </div>
   </div>
 
@@ -228,23 +228,23 @@
       <ul>
         
           <li>
-            <a href="/2025/01/15/cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/">cpp相关语法知识</a>
+            <a href="/blog/2025/01/15/cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/">cpp相关语法知识</a>
           </li>
         
           <li>
-            <a href="/2025/01/15/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8EGitHub%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">如何基于GitHub和hexo搭建个人博客</a>
+            <a href="/blog/2025/01/15/%E5%A6%82%E4%BD%95%E5%9F%BA%E4%BA%8EGitHub%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">如何基于GitHub和hexo搭建个人博客</a>
           </li>
         
           <li>
-            <a href="/2025/01/15/%E5%89%8D%E7%AB%AF-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">前端-学习记录</a>
+            <a href="/blog/2025/01/15/%E5%89%8D%E7%AB%AF-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">前端-学习记录</a>
           </li>
         
           <li>
-            <a href="/2025/01/13/wry-first-blog/">&#39;wry-first-blog&#39;</a>
+            <a href="/blog/2025/01/13/wry-first-blog/">&#39;wry-first-blog&#39;</a>
           </li>
         
           <li>
-            <a href="/2025/01/13/hello-world/">Hello World</a>
+            <a href="/blog/2025/01/13/hello-world/">Hello World</a>
           </li>
         
       </ul>
@@ -269,25 +269,25 @@
     </div>
     <nav id="mobile-nav">
   
-    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="/blog/" class="mobile-nav-link">Home</a>
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
   
 </nav>
     
 
 
-<script src="/js/jquery-3.6.4.min.js"></script>
+<script src="/blog/js/jquery-3.6.4.min.js"></script>
 
 
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+<script src="/blog/fancybox/jquery.fancybox.min.js"></script>
 
 
 
 
-<script src="/js/script.js"></script>
+<script src="/blog/js/script.js"></script>
 
 
 
