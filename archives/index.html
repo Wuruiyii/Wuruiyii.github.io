@@ -1,63 +1,48 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords"><meta name="descriptioon" content=""><meta name="renderer" content="wekit"><link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/css/public.css"><link rel="stylesheet" href="/css/reset.css"><link rel="stylesheet" href="/css/iconfont.css"><title>Blog [ Wuruiyi's Blog ]</title><link rel="stylesheet" href="/css/partial/footer.css"><link rel="stylesheet" href="/css/partial/posts.css"><link rel="stylesheet" href="/css/partial/posts.css"><link rel="stylesheet" href="/css/partial/sidebar.css"><link rel="stylesheet" href="/css/archive.css"><link rel="stylesheet" href="/css/index.css"><meta name="generator" content="Hexo 7.3.0"></head><body><link rel="stylesheet" href="/css/partial/header.css"><div class="header"><div class="maxwidth"><div class="nav"><a id="artlist" href="/404"><i class="iconfont icon404"></i><span class="headhid">&nbsp;404</span></a><a class="focuspage" id="artlist" href="/archives"><i class="iconfont iconarchives"></i><span class="headhid">&nbsp;Archives</span></a><a id="artlist" href="/link"><i class="iconfont iconlink"></i><span class="headhid">&nbsp;Link</span></a><a id="artlist" href="/about"><i class="iconfont iconabout"></i><span class="headhid">&nbsp;About</span></a></div><a class="search" href="/">HELLO</a></div></div><div class="main"> <div class="maxwidth"><link rel="stylesheet" href="/css/partial/sidebar.css"><div id="sidebar"><div class="social"><a href="/archives" title="Home"><i class="iconfont iconHome"></i></a><a href="mailto:1509989070@qq.com" title="E-Mail"><i class="iconfont iconweibiaoti554"></i></a><a target="_blank" rel="noopener" href="https://github.com/wuruiyii" title="GitHub"><i class="iconfont iconGitHub"></i></a><a target="_blank" rel="noopener" href="https://juejin.cn/user/2619479630028523" title="juejin"><img src="/images/juejinicon-sidebar.png"></a><a target="_blank" rel="noopener" href="https://www.jianshu.com/u/558fe23049c7" title="jianshu"><img src="/images/jianicon-sidebar.png"></a></div><div class="tags"></div></div><div class="archive rightside"><div id="list_archives" style="opacity: 0;display:  none"><div class="switch" id="arshow"><i class="iconfont iconarchives"></i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/02/">February 2025</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">January 2025</a><span class="archive-list-count">12</span></li></ul></div><div id="normalposts"><div class="switch" id="poshow"><i class="iconfont iconshijian"></i><span>Timeline</span></div><article><a class="artititle" href="/2025/02/23/%E5%A5%BD%E6%95%B0/">好数</a><div class="content ellipse"><p>一个整数如果按从低位到高位的顺序，奇数位 (个位、百位、万位 ⋯⋯ ) 上的数字是奇数，偶数位 (十位、千位、十万位 ⋯⋯ ) 上的数字是偶数，我们就称之为 “好数”。
-给定一个正整数 NN，请计算从 1 到 NN 一共有多少个好数。
-思路：在主函数里面只需要输入n，然后利用一个函数 isgood 进行返回是否为好数即可，不断进行累加
-写一个isgood函数，里面进行判断是否是好数：1.设置一个标志进行判断，是奇数位还是偶数位，2.判断相应位置上是奇数还是偶数，如果不符合条件就返回错误，否则返回正确
-1234567891011121314151617181920212223242526272829303132333435#include&lt;iostream&gt;using namespace std;bool isgood(int a)&#123;    int flag  =...</p></div><div class="meta"><i class="iconfont iconshijian" title="创建时间">2025-02-23</i></div></article><article><a class="artititle" href="/2025/02/22/%E5%B0%8F%E7%90%83%E5%8F%8D%E5%BC%B9/">小球反弹</a><div class="content ellipse"><p>本题可以用一个扩展的思路，将反弹的射线不再单纯的在一小格之内进行反射，而是将射线扩展开，不断地补小格子，让射线一直延展，直到射线展开到右下角，然后再反弹回来（乘以2）即可。
-1234567891011121314151617#include&lt;bits/stdc++.h&gt;using namespace std;int main()&#123;    long long x = 343720,y = 233333,t = 1;    while(1)    &#123;        if((15*t) % x == 0 &amp;&amp; (17*t) % y == 0) //走了恰好成倍数的长和恰好成倍数的宽            break;        t++;                         &#125;    //找到延展到右下角的最小t   ...</p></div><div class="meta"><i class="iconfont iconshijian" title="创建时间">2025-02-22</i></div></article><article><a class="artititle" href="/2025/02/20/%E6%8F%A1%E6%89%8B%E9%97%AE%E9%A2%98/">握手问题</a><div class="content ellipse"><p>握手问题
-一共50个人，其中43个人彼此需要握手，并且需要和剩下的七个人进行握手，但是那七个人彼此之间不会握手，只会与剩下的43人进行握手。所以我们先不考虑剩下的7个人，先只考虑43个人，第1个人，与42个人握手，第二个人，因为与第一个人握过手了，所以只需要和41个人握手，依次类推，第三个，40，4，39，抽象出来就是，从42次加到1次利用for循环；剩下的7个人，每一个人都需要握手43次，那么代码就出来了
-12345678910111213#include &lt;iostream&gt;using namespace std;int main()&#123;  int sum = 0;  for(int i = 42 ;i &gt;= 1;i--)  &#123;    sum += i;  &#125;  sum += 7 * 43;  cout&lt;&lt;sum;  re...</p></div><div class="meta"><i class="iconfont iconshijian" title="创建时间">2025-02-20</i></div></article><article><a class="artititle" href="/2025/02/01/uni-app/">uni-app</a><div class="content ellipse"><p>Apifox
-Apifox接口调试：
-是指使用Apifox工具来测试、验证和调试API接口的过程。
-在开发API时，接口调试是一个非常重要的环节，它可以帮助开发人员确保接口的正确性、稳定性和可用性。
-使用Apifox进行接口调试时，可以执行以下操作：
-1.发送请求：使用Apifox的请求构建器，您可以设置请求的URL、请求方法、请求头、请求体等参数，并发送请求到目标API接口。2.查看响应：Apifox会收到目标API接口返回的响应，您可以查看响应的状态码、响应头、响应体等信息。3.调试参数：您可以在请求过程中调整请求参数，例如修改请求头、请求体中的数据，以便进行测试和调试。4.断言验证：Apifox提供了断言功能，您可以对响应的内容进行验证，确保接口返回的数据符合预期。5.脚本编写：如果需要进行更复杂的数据处理、逻辑判断等操作，您可以使用Apifox的脚本功能，编写JavaScri...</p></div><div class="meta"><i class="iconfont iconshijian" title="创建时间">2025-02-01</i></div></article><article><a class="artititle" href="/2025/01/24/%E6%96%B0%E5%A2%9E%E5%8A%9F%E8%83%BD/">post</a><div class="content ellipse"><p></p></div><div class="meta"><i class="iconfont iconshijian" title="创建时间">2025-01-24</i></div></article><article><a class="artititle" href="/2025/01/21/vue-element-plus/">vue+element_plus</a><div class="content ellipse"><p>123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135//App.vue&lt;template&gt;  &lt;div class=&quot;body&quot;&gt;          &lt;div class=&quot;form&quot...</p></div><div class="meta"><i class="iconfont iconshijian" title="创建时间">2025-01-21</i></div></article><article><a class="artititle" href="/2025/01/21/Review-WebApI/">Review-WebApI</a><div class="content ellipse"><p>Web APIs作用：使用 js 操作html 和浏览器
-分类： DOM （文档对象模型）和  BOM（浏览器对象模型）
-DOM作用：开发网页内容特效和实现用户交互
+{% extends '_layout.swig' %}
+{% import '_macro/post-collapse.swig' as post_template with context %}
+{% import '_macro/sidebar.swig' as sidebar_template with context %}
 
-获取DOM元素根据css选择器来获取DOM元素
-1document.querySelector(&#x27;css选择器&#x27;)
+{% block title %}{{ __('title.archive') }} | {{ title }}{% endblock %}
 
-返回值：会获取到匹配的第一个元素，一个对象
-123456789101112131415161718192021222324252627&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;Title&lt;/title&gt;    //css样式    &lt;style&gt;      ...</p></div><div class="meta"><i class="iconfont iconshijian" title="创建时间">2025-01-21</i></div></article><article><a class="artititle" href="/2025/01/19/Vue3(%E4%B8%8B%EF%BC%89/">Vue3(下）</a><div class="content ellipse"><p>组件通信Vue3组件通信和Vue2的区别：
+{% block class %}archive{% endblock %}
 
-移出事件总线，使用mitt代替。
+{% block content %}
 
+  {#####################}
+  {### ARCHIVE BLOCK ###}
+  {#####################}
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        {%- set posts_length = site.posts.length %}
+        {%- if posts_length > 210 %}
+          {%- set cheers = 'excellent' %}
+        {% elif posts_length > 130 %}
+          {%- set cheers = 'great' %}
+        {% elif posts_length > 80 %}
+          {%- set cheers = 'good' %}
+        {% elif posts_length > 50 %}
+          {%- set cheers = 'nice' %}
+        {% elif posts_length > 30 %}
+          {%- set cheers = 'ok' %}
+        {% else %}
+          {%- set cheers = 'um' %}
+        {%- endif %}
+        <span class="collection-header">{{ __('cheers.' + cheers) }}! {{ _p('counter.archive_posts', site.posts.length) }} {{ __('keep_on') }}</span>
+      </div>
 
-vuex换成了pinia。
-把.sync优化到了v-model里面了。
-把$listeners所有的东西，合并到$attrs中了。
-$children被砍掉了。
+      {{ post_template.render(page.posts) }}
 
-【props】概述：props是使用频率最高的一种通信方式，常用与 ：父 ↔ 子。
+    </div>
+  </div>
+  {#########################}
+  {### END ARCHIVE BLOCK ###}
+  {#########################}
 
-若 父传子：属性值是非函数。
-若 子传父：属性值是函数。
+  {% include '_partials/pagination.swig' %}
 
-父组件：
-1234567891011121314151617181920&lt;template&gt;  &lt;div class=&quot;father&quot;&gt;    &lt;h3&gt;父组件，&lt;/h3&gt;		&lt;h4&gt;我的车：&#123;&#123; car &#125;&#125;&lt;/h4&gt;		&lt;h4&gt;儿子给的玩具：&#123;...</p></div><div class="meta"><i class="iconfont iconshijian" title="创建时间">2025-01-19</i></div></article><article><a class="artititle" href="/2025/01/18/Vue3(%E4%B8%AD)/">Vue3(中)</a><div class="content ellipse"><p>【watchEffect】
-官网：立即运行一个函数，同时响应式地追踪其依赖，并在依赖更改时重新执行该函数。
+{% endblock %}
 
-watch对比watchEffect
-
-
-都能监听响应式数据的变化，不同的是监听数据变化的方式不同
-
-watch：要明确指出监视的数据
-
-watchEffect：不用明确指出监视的数据（函数中用到哪些属性，那就监视哪些属性）。
-
-
-
-
-示例代码：
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748&lt;template&gt;  &lt;div class=&quot;person&quot;&gt;    &lt;h1&gt;需求：水温达到50℃，或水位达到20cm，则联系服务器&lt;/h1&gt;    &lt;h2 id=&quot;demo&...</p></div><div class="meta"><i class="iconfont iconshijian" title="创建时间">2025-01-18</i></div></article><article><a class="artititle" href="/2025/01/17/Vue3(%E4%B8%8A)/">Vue3</a><div class="content ellipse"><p>Vue3创建vue3工程基于vite创建12345678910111213141516171819202122## 1.创建命令npm create vue@latest## 2.具体配置## 配置项目名称√ Project name: vue3_test## 是否添加TypeScript支持√ Add TypeScript?  Yes## 是否添加JSX支持√ Add JSX Support?  No## 是否添加路由环境√ Add Vue Router for Single Page Application development?  No## 是否添加pinia环境√ Add Pinia for state management?  No## 是否添加单元测试√ Add Vitest for Unit Testing?  No## 是否添加端到端测试方案√ Add an End...</p></div><div class="meta"><i class="iconfont iconshijian" title="创建时间">2025-01-17</i></div></article><div id="paginator"><span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next</a></div></div><script>document.getElementById('arshow').onclick = function() {
-    document.getElementById('list_archives').style = 'opacity: 0;display: none'
-    document.getElementById('normalposts').style = 'opacity: 0;display: block'
-    setTimeout(() => {
-        document.getElementById('normalposts').style.opacity = '1'                        
-    }, 100);
-}
-document.getElementById('poshow').onclick = function() {
-    document.getElementById('normalposts').style = 'opacity: 0;display: none'
-    document.getElementById('list_archives').style = 'opacity: 1;display: block'
-}</script><link rel="stylesheet" href="/css/partial/footer.css"><div class="footer"><p><span>Copyright © 2017 - 2023</span><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/">蜀ICP备19024124号</a></p><p><i class="iconfont iconchakan"><span>本站总访问量</span><span id="busuanzi_container_site_pv">  <span id="busuanzi_value_site_pv"></span> </span></i><i class="iconfont iconabout"><span>本站访客数</span><span id="busuanzi_container_site_uv">  <span id="busuanzi_value_site_uv"></span> </span></i></p></div></div></div></div><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></body></html>
+{% block sidebar %}
+  {{ sidebar_template.render(false) }}
+{% endblock %}
