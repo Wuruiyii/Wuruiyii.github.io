@@ -1,20 +1,915 @@
-{% extends '_layout.swig' %}
-{% import '_macro/sidebar.swig' as sidebar_template with context %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-{% block title %}{{ title }}{%- if theme.index_with_subtitle and subtitle %} - {{ subtitle }}{%- endif %}{% endblock %}
+<link rel="stylesheet" href="/css/main.css">
 
-{% block class %}index posts-expand{% endblock %}
 
-{% block content %}
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-  {%- for post in page.posts.toArray() %}
-    {{ partial('_macro/post.swig', {post: post, is_index: true}) }}
-  {%- endfor %}
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wuruiyii.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
-  {% include '_partials/pagination.swig' %}
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Wuruiyi&#39;s Blog">
+<meta property="og:url" content="https://wuruiyii.github.io/page/2/index.html">
+<meta property="og:site_name" content="Wuruiyi&#39;s Blog">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Wu Rui Yi">
+<meta name="twitter:card" content="summary">
 
-{% endblock %}
+<link rel="canonical" href="https://wuruiyii.github.io/page/2/">
 
-{% block sidebar %}
-  {{ sidebar_template.render(false) }}
-{% endblock %}
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Wuruiyi's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Wuruiyi's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Wuruiyi's Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://wuruiyii.github.io/2025/01/16/TypeScript/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Wu Rui Yi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wuruiyi's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/01/16/TypeScript/" class="post-title-link" itemprop="url">TypeScript</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2025-01-16 16:51:22 / Modified: 21:55:51" itemprop="dateCreated datePublished" datetime="2025-01-16T16:51:22+08:00">2025-01-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h1><p>TS 的核心是进行<strong>静态类型检查</strong>（在运行代码前进行检查，发现代码的错误或者不合理之处，减小运行时异常的出现的几率）</p>
+<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>浏览器不能直接运⾏ TypeScript 代码，需要编译为 JavaScript 再交由浏览器解析器执⾏。</p>
+<h3 id="命令行编译"><a href="#命令行编译" class="headerlink" title="命令行编译"></a>命令行编译</h3><p>1.第⼀步：创建⼀个 demo.ts ⽂件，例如：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line"> <span class="attr">name</span>:<span class="string">&#x27;李四&#x27;</span>,</span><br><span class="line"> <span class="attr">age</span>:<span class="number">18</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`我叫<span class="subst">$&#123;person.name&#125;</span>，我今年<span class="subst">$&#123;person.age&#125;</span>岁了`</span>)</span><br></pre></td></tr></table></figure>
+
+<p>2.第二步：全局安装 TypeScript </p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i typescript -g</span><br></pre></td></tr></table></figure>
+
+<p>3.第三步：使⽤命令编译 .ts ⽂件</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc demo.<span class="property">ts</span> </span><br></pre></td></tr></table></figure>
+
+<h3 id="自动化编译"><a href="#自动化编译" class="headerlink" title="自动化编译"></a>自动化编译</h3><p>1.第⼀步：创建 TypeScript 编译控制⽂件</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc --init</span><br></pre></td></tr></table></figure>
+
+<p>  ⼯程中会⽣成⼀个 tsconfig.json 配置⽂件，其中包含着很多编译时的配置。</p>
+<p>  观察发现，默认编译的 JS 版本是 ES7 ，我们可以⼿动调整为其他版本。</p>
+<p>2.第⼆步：监视⽬录中的 .ts ⽂件变化</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc --watch 或 tsc -w</span><br></pre></td></tr></table></figure>
+
+<p>3.第三步：小优化，当编译出错时不⽣成 .js ⽂件</p>
+<p>修改 tsconfig.json 中的 noEmitOnError 配置，将其从注释中放出来</p>
+<h2 id="类型声明"><a href="#类型声明" class="headerlink" title="类型声明"></a>类型声明</h2><p>使⽤ <strong>:</strong> 来对变量或函数形参，进⾏类型声明：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">a</span>: <span class="built_in">string</span> <span class="comment">//变量a只能存储字符串</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">b</span>: <span class="built_in">number</span> <span class="comment">//变量b只能存储数值</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">c</span>: <span class="built_in">boolean</span> <span class="comment">//变量c只能存储布尔值</span></span><br><span class="line">a = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">a = <span class="number">100</span> <span class="comment">//警告：不能将类型“number”分配给类型“string”</span></span><br><span class="line">b = <span class="number">666</span></span><br><span class="line">b = <span class="string">&#x27;你好&#x27;</span><span class="comment">//警告：不能将类型“string”分配给类型“number”</span></span><br><span class="line">c = <span class="literal">true</span></span><br><span class="line">c = <span class="number">666</span> <span class="comment">//警告：不能将类型“number”分配给类型“boolean”</span></span><br><span class="line"><span class="comment">// 参数x必须是数字，参数y也必须是数字，函数返回值也必须是数字</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">demo</span>(<span class="params"><span class="attr">x</span>:<span class="built_in">number</span>,<span class="attr">y</span>:<span class="built_in">number</span></span>):<span class="built_in">number</span>&#123;</span><br><span class="line"> <span class="keyword">return</span> x + y</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">demo</span>(<span class="number">100</span>,<span class="number">200</span>) </span><br><span class="line"><span class="title function_">demo</span>(<span class="number">100</span>,<span class="string">&#x27;200&#x27;</span>) <span class="comment">//警告：类型“string”的参数不能赋给类型“number”的参数</span></span><br><span class="line"><span class="title function_">demo</span>(<span class="number">100</span>,<span class="number">200</span>,<span class="number">300</span>) <span class="comment">//警告：应有 2 个参数，但获得 3 个</span></span><br><span class="line"><span class="title function_">demo</span>(<span class="number">100</span>) <span class="comment">//警告：应有 2 个参数，但获得 1 个</span></span><br></pre></td></tr></table></figure>
+
+<p>在 : 后也可以写<strong>字⾯量类型</strong>，不过实际开发中⽤的不多。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">a</span>: <span class="string">&#x27;你好&#x27;</span> <span class="comment">//a的值只能为字符串“你好”</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">b</span>: <span class="number">100</span> <span class="comment">//b的值只能为数字100</span></span><br><span class="line">a = <span class="string">&#x27;欢迎&#x27;</span><span class="comment">//警告：不能将类型“&quot;欢迎&quot;”分配给类型“&quot;你好&quot;”</span></span><br><span class="line">b = <span class="number">200</span> <span class="comment">//警告：不能将类型“200”分配给类型“100”</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="类型推断"><a href="#类型推断" class="headerlink" title="类型推断"></a>类型推断</h2><p>TS 会根据我们的代码，进⾏类型推导，例如下⾯代码中的变量 d ，只能存储数字</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> d = -<span class="number">99</span> <span class="comment">//TypeScript会推断出变量d的类型是数字</span></span><br><span class="line">d = <span class="literal">false</span> <span class="comment">//警告：不能将类型“boolean”分配给类型“number”</span></span><br></pre></td></tr></table></figure>
+
+<p>但要注意，类型推断不是万能的，⾯对复杂类型时推断容易出问题，所以尽量还是明确的编写类型声明！</p>
+<h2 id="类型总览"><a href="#类型总览" class="headerlink" title="类型总览"></a>类型总览</h2><h3 id="JavaScript-中的数据类型"><a href="#JavaScript-中的数据类型" class="headerlink" title="JavaScript 中的数据类型"></a>JavaScript 中的数据类型</h3><p>① string  </p>
+<p>② number  </p>
+<p>③ boolean </p>
+<p> ④ null  </p>
+<p>⑤ undefined</p>
+<p>  ⑥ bigint （大整数值）</p>
+<p> ⑦ symbol </p>
+<p> ⑧ object  备注：其中 object 包含： Array 、 Function 、 Date 、 Error 等……</p>
+<h3 id="TypeScript-中的数据类型"><a href="#TypeScript-中的数据类型" class="headerlink" title="TypeScript 中的数据类型"></a>TypeScript 中的数据类型</h3><p>   1.上述所有 JavaScript 类型 </p>
+<ol start="2">
+<li>六个新类型： ① any  ② unknown  ③ never  ④ void  ⑤  tuple  ⑥  enum </li>
+<li>两个⽤于⾃定义类型的⽅式： ① type  ② interface</li>
+</ol>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>在 JavaScript 中的这些内置构造函数： Number 、 String 、 Boolean ，⽤于 创建对应的包装对象， 在⽇常开发时很少使⽤，在 TypeScript 中也是同理，所以 在 TypeScript 中进⾏类型声明时，通常都是⽤⼩写的 number 、 string 、 boolean</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">str1</span>: <span class="built_in">string</span></span><br><span class="line">str1 = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">str1 = <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&#x27;hello&#x27;</span>) <span class="comment">//报错</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">str2</span>: <span class="title class_">String</span></span><br><span class="line">str2 = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">str2 = <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> str1) <span class="comment">//string</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> str2) <span class="comment">//object</span></span><br></pre></td></tr></table></figure>
+
+<p>​     <strong>原始类型 VS 包装对象</strong></p>
+<ol>
+<li><p>原始类型：如 number 、 string 、 boolean ，在 JavaScript 中是简单数据类型，它们在内存中占用空间少，处理速度快。</p>
+</li>
+<li><p>包装对象：如 Number 对象、 String 对象、 Boolean 对象，是复杂类型，在内存中占用更多空间，在日常开发时很少由开发人员自己创建包装对象。 </p>
+</li>
+<li><p>自动装箱：JavaScript 在必要时会自动将原始类型包装成对象，以便调用方法或访问属性</p>
+</li>
+</ol>
+   <figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">/ 原始类型字符串</span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line"><span class="comment">// 当访问str.length时，JavaScript引擎做了以下⼯作：</span></span><br><span class="line"><span class="keyword">let</span> size = (<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line"> <span class="comment">// 1. ⾃动装箱：创建⼀个临时的String对象包装原始字符串</span></span><br><span class="line"> <span class="keyword">let</span> tempStringObject = <span class="keyword">new</span> <span class="title class_">String</span>(str);</span><br><span class="line"> <span class="comment">// 2. 访问String对象的length属性</span></span><br><span class="line"> <span class="keyword">let</span> lengthValue = tempStringObject.<span class="property">length</span>;</span><br><span class="line"> <span class="comment">// 3. 销毁临时对象，返回⻓度值</span></span><br><span class="line"> <span class="comment">// （JavaScript引擎⾃动处理对象销毁，开发者⽆感知）</span></span><br><span class="line"> <span class="keyword">return</span> lengthValue;</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(size); <span class="comment">// 输出: 5</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="常用类型"><a href="#常用类型" class="headerlink" title="常用类型"></a>常用类型</h2><h3 id="any"><a href="#any" class="headerlink" title="any"></a>any</h3><p>any 的含义是：任意类型，⼀旦将变量类型限制为 any ，那就意味着放弃了对该变量的<strong>类型检查</strong>。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 明确的表示a的类型是 any —— 【显式的any】</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">a</span>: <span class="built_in">any</span> </span><br><span class="line"><span class="comment">// 以下对a的赋值，均⽆警告</span></span><br><span class="line">a = <span class="number">100</span></span><br><span class="line">a = <span class="string">&#x27;你好&#x27;</span></span><br><span class="line">a = <span class="literal">false</span></span><br><span class="line"><span class="comment">// 没有明确的表示b的类型是any，但TS主动推断出来b是any —— 隐式的any</span></span><br><span class="line"><span class="keyword">let</span> b </span><br><span class="line"><span class="comment">//以下对b的赋值，均⽆警告</span></span><br><span class="line">b = <span class="number">100</span></span><br><span class="line">b = <span class="string">&#x27;你好&#x27;</span></span><br><span class="line">b = <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>注意点： any 类型的变量，可以赋值给任意类型的变量</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 注意点：any类型的变量，可以赋值给任意类型的变量 */</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">c</span>:<span class="built_in">any</span></span><br><span class="line">c = <span class="number">9</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">x</span>: <span class="built_in">string</span></span><br><span class="line">x = c <span class="comment">// ⽆警告</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="unknown"><a href="#unknown" class="headerlink" title="unknown"></a>unknown</h3><p>unknown 的含义是：未知类型，适⽤于：起初不确定数据的具体类型，要后期才能确定</p>
+<ol>
+<li>unknown 可以理解为⼀个类型安全的 any 。</li>
+</ol>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置a的类型为unknown</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">a</span>: <span class="built_in">unknown</span> </span><br><span class="line"><span class="comment">//以下对a的赋值，均符合规范</span></span><br><span class="line">a = <span class="number">100</span></span><br><span class="line">a = <span class="literal">false</span></span><br><span class="line">a = <span class="string">&#x27;你好&#x27;</span></span><br><span class="line"><span class="comment">// 设置x的数据类型为string</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">x</span>: <span class="built_in">string</span></span><br><span class="line">x = a <span class="comment">//警告：不能将类型“unknown”分配给类型“string”</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>unknown 会强制开发者在使⽤之前进⾏类型检查，从⽽提供更强的类型安全性。</li>
+</ol>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置a的类型为unknown</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">a</span>: <span class="built_in">unknown</span></span><br><span class="line">a = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line"><span class="comment">//第⼀种⽅式：加类型判断</span></span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">typeof</span> a === <span class="string">&#x27;string&#x27;</span>)&#123;</span><br><span class="line"> x = a </span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(x)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//第⼆种⽅式：加断⾔</span></span><br><span class="line">x = a <span class="keyword">as</span> <span class="built_in">string</span></span><br><span class="line"><span class="comment">//第三种⽅式：加断⾔</span></span><br><span class="line">x = &lt;<span class="built_in">string</span>&gt;a</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>读取 any 类型数据的任何属性都不会报错，⽽ unknown 正好与之相反。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">str1</span>: <span class="built_in">string</span></span><br><span class="line">str1 = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">str1.<span class="title function_">toUpperCase</span>() <span class="comment">//⽆警告</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">str2</span>: <span class="built_in">any</span></span><br><span class="line">str2 = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">str2.<span class="title function_">toUpperCase</span>() <span class="comment">//⽆警告</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">str3</span>: <span class="built_in">unknown</span></span><br><span class="line">str3 = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">str3.<span class="title function_">toUpperCase</span>() <span class="comment">//警告：“str3”的类型为“未知”</span></span><br><span class="line"><span class="comment">// 使⽤断⾔强制指定str3的类型为string</span></span><br><span class="line">(str3 <span class="keyword">as</span> <span class="built_in">string</span>).<span class="title function_">toUpperCase</span>() <span class="comment">//⽆警告</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="never"><a href="#never" class="headerlink" title="never"></a>never</h3><p>never 的含义是：任何值都不是，即：不能有值，例如 undefined 、 nul l 、 ‘’ 、 0 都不⾏！</p>
+<ol>
+<li>⼏乎不⽤ never 去直接限制变量，因为没有意义，例如：</li>
+</ol>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 指定a的类型为never，那就意味着a以后不能存任何的数据了 */</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">a</span>: <span class="built_in">never</span></span><br><span class="line"><span class="comment">// 以下对a的所有赋值都会有警告</span></span><br><span class="line">a = <span class="number">1</span> </span><br><span class="line">a = <span class="literal">true</span></span><br><span class="line">a = <span class="literal">undefined</span></span><br><span class="line">a = <span class="literal">null</span></span><br></pre></td></tr></table></figure>
+
+<p>2.never ⼀般是 TypeScript 主动推断出来的，例如:</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 指定a的类型为string</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">a</span>: <span class="built_in">string</span></span><br><span class="line"><span class="comment">// 给a设置⼀个值</span></span><br><span class="line">a = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> a === <span class="string">&#x27;string&#x27;</span>) </span><br><span class="line">&#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(a.<span class="title function_">toUpperCase</span>())</span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(a) <span class="comment">// TypeScript会推断出此处的a是never，因为没有任何⼀个值符合此处的逻辑</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.never 也可⽤于限制函数的返回值</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 限制throwError函数不需要有任何返回值，任何值都不⾏，像undeifned、null都不⾏</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">throwError</span>(<span class="params"><span class="attr">str</span>: <span class="built_in">string</span></span>): <span class="built_in">never</span> &#123;</span><br><span class="line"> <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;程序异常退出:&#x27;</span> + str)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="void"><a href="#void" class="headerlink" title="void"></a>void</h3><p>void 的含义是空，即：函数不返回任何值，调⽤者也不应依赖其返回值进⾏任何操作！</p>
+<p>1.void 通常⽤于函数返回值声明</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">logMessage</span>(<span class="params"><span class="attr">msg</span>:<span class="built_in">string</span></span>):<span class="built_in">void</span>&#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(msg)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">logMessage</span>(<span class="string">&#x27;你好&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>注意：编码者没有编写 return 指定函数返回值，所以 logMessage 函数是没有显式 返回值的，但会有⼀个隐式返回值 ，是 undefined ，虽然函数返回类型为 void ，但 也是可以接受 undefined 的，简单记： undefined 是 void 可以接受的⼀种“空”。</p>
+<p>2.以下写法均符合规范</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ⽆警告</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">logMessage</span>(<span class="params"><span class="attr">msg</span>:<span class="built_in">string</span></span>):<span class="built_in">void</span>&#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(msg)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ⽆警告</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">logMessage</span>(<span class="params"><span class="attr">msg</span>:<span class="built_in">string</span></span>):<span class="built_in">void</span>&#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(msg)</span><br><span class="line"> <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ⽆警告</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">logMessage</span>(<span class="params"><span class="attr">msg</span>:<span class="built_in">string</span></span>):<span class="built_in">void</span>&#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(msg)</span><br><span class="line"> <span class="keyword">return</span> <span class="literal">undefined</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.那限制函数返回值时，是不是 undefined 和 void 就没区别呢？—— 有区别。因为还有这句话 ：【返回值类型为 void 的函数，调用者不应依赖其返回值进行任何操作！】对比下面两段代码：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">（<span class="number">1</span>）<span class="keyword">function</span> <span class="title function_">logMessage</span>(<span class="params"><span class="attr">msg</span>:<span class="built_in">string</span></span>):<span class="built_in">void</span>&#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(msg)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> result = <span class="title function_">logMessage</span>(<span class="string">&#x27;你好&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span>(result)&#123; <span class="comment">// 此⾏报错：⽆法测试 &quot;void&quot; 类型的表达式的真实性</span></span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;logMessage有返回值&#x27;</span>)</span><br><span class="line"> &#125;</span><br><span class="line">（<span class="number">2</span>）<span class="keyword">function</span> <span class="title function_">logMessage</span>(<span class="params"><span class="attr">msg</span>:<span class="built_in">string</span></span>):<span class="literal">undefined</span>&#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(msg)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> result = <span class="title function_">logMessage</span>(<span class="string">&#x27;你好&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span>(result)&#123; <span class="comment">// 此⾏⽆警告</span></span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;logMessage有返回值&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>理解 void 与 undefined </p>
+<p>void 是⼀个广泛的概念，用来表达“空”，而undefined  则是这种“空”的具体实现。 因此可以说  undefined 是 void 能接受的⼀种“空”的状态。 也可以理解为： void 包含 undefined ，但 void 所表达的语义超越了 undefined ， void 是⼀种意图上的约定，⽽不仅仅是特定值的限制。 </p>
+<p>**总结：**如果⼀个函数返回类型为 void ，那么： </p>
+<ol>
+<li>从语法上讲：函数是可以返回 undefined 的，⾄于显式返回，还是隐式返回，这无所谓！ </li>
+<li>从语义上讲：函数调用者不应关⼼函数返回的值，也不应依赖返回值进行任何操作！ 即使我们知道它返回了 undefined 。</li>
+</ol>
+<h3 id="object"><a href="#object" class="headerlink" title="object"></a>object</h3><p>实际开发中⽤的相对较少，因为范围太⼤</p>
+<p>object （⼩写）的含义是：所有⾮原始类型，可存储：对象、函数、数组等，由于限制 的范围⽐较宽泛，在实际开发中使⽤的相对较少。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">a</span>:<span class="built_in">object</span> <span class="comment">//a的值可以是任何【⾮原始类型】，包括：对象、函数、数组等</span></span><br><span class="line"><span class="comment">// 以下代码，是将【⾮原始类型】赋给a，所以均符合要求</span></span><br><span class="line">a = &#123;&#125;</span><br><span class="line">a = &#123;<span class="attr">name</span>:<span class="string">&#x27;张三&#x27;</span>&#125;</span><br><span class="line">a = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>]</span><br><span class="line">a = <span class="keyword">function</span>(<span class="params"></span>)&#123;&#125;</span><br><span class="line">a = <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&#x27;123&#x27;</span>)</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;&#125;</span><br><span class="line">a = <span class="keyword">new</span> <span class="title class_">Person</span>()</span><br><span class="line"><span class="comment">// 以下代码，是将【原始类型】赋给a，有警告</span></span><br><span class="line">a = <span class="number">1</span> <span class="comment">// 警告：不能将类型“number”分配给类型“object”</span></span><br><span class="line">a = <span class="literal">true</span> <span class="comment">// 警告：不能将类型“boolean”分配给类型“object”</span></span><br><span class="line">a = <span class="string">&#x27;你好&#x27;</span> <span class="comment">// 警告：不能将类型“string”分配给类型“object” </span></span><br><span class="line">a = <span class="literal">null</span> <span class="comment">// 警告：不能将类型“null”分配给类型“object”</span></span><br><span class="line">a = <span class="literal">undefined</span> <span class="comment">// 警告：不能将类型“undefined”分配给类型“object”</span></span><br></pre></td></tr></table></figure>
+
+<p>Object(大写）: 所有可以调⽤ Object ⽅法的类型,除了 undefined 和 null 的任何值</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">b</span>:<span class="title class_">Object</span> <span class="comment">//b的值必须是Object的实例对象（除去undefined和null的任何值）</span></span><br><span class="line"><span class="comment">// 以下代码，均⽆警告，因为给a赋的值，都是Object的实例对象</span></span><br><span class="line">b = &#123;&#125;</span><br><span class="line">b = &#123;<span class="attr">name</span>:<span class="string">&#x27;张三&#x27;</span>&#125;</span><br><span class="line">b = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>]</span><br><span class="line">b = <span class="keyword">function</span>(<span class="params"></span>)&#123;&#125;</span><br><span class="line">b = <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&#x27;123&#x27;</span>)</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;&#125;</span><br><span class="line">b = <span class="keyword">new</span> <span class="title class_">Person</span>()</span><br><span class="line">b = <span class="number">1</span> <span class="comment">// 1不是Object的实例对象，但其包装对象是Object的实例</span></span><br><span class="line">b = <span class="literal">true</span> <span class="comment">// truue不是Object的实例对象，但其包装对象是Object的实例</span></span><br><span class="line">b = <span class="string">&#x27;你好&#x27;</span> <span class="comment">// “你好”不是Object的实例对象，但其包装对象是Object的实例</span></span><br><span class="line"><span class="comment">// 以下代码均有警告</span></span><br><span class="line">b = <span class="literal">null</span> <span class="comment">// 警告：不能将类型“null”分配给类型“Object”</span></span><br><span class="line">b = <span class="literal">undefined</span> <span class="comment">// 警告：不能将类型“undefined”分配给类型“Object”</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>声明对象类型</strong></p>
+<p>1.实际开发中，限制⼀般对象，通常使⽤以下形式 </p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 限制person1对象必须有name属性，age为可选属性</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">person1</span>: &#123; <span class="attr">name</span>: <span class="built_in">string</span>, <span class="attr">age</span>?: <span class="built_in">number</span> &#125;</span><br><span class="line"><span class="comment">// 含义同上，也能⽤分号做分隔</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">person2</span>: &#123; <span class="attr">name</span>: <span class="built_in">string</span>; <span class="attr">age</span>?: <span class="built_in">number</span> &#125;</span><br><span class="line"><span class="comment">// 含义同上，也能⽤换⾏做分隔</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">person3</span>: &#123;</span><br><span class="line"> <span class="attr">name</span>: <span class="built_in">string</span></span><br><span class="line"> <span class="attr">age</span>?: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 如下赋值均可以</span></span><br><span class="line">person1 = &#123;<span class="attr">name</span>:<span class="string">&#x27;李四&#x27;</span>,<span class="attr">age</span>:<span class="number">18</span>&#125;</span><br><span class="line">person2 = &#123;<span class="attr">name</span>:<span class="string">&#x27;张三&#x27;</span>&#125;</span><br><span class="line">person3 = &#123;<span class="attr">name</span>:<span class="string">&#x27;王五&#x27;</span>&#125;</span><br><span class="line"><span class="comment">// 如下赋值不合法，因为person3的类型限制中，没有对gender属性的说明</span></span><br><span class="line">person3 = &#123;<span class="attr">name</span>:<span class="string">&#x27;王五&#x27;</span>,<span class="attr">gender</span>:<span class="string">&#x27;男&#x27;</span>&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2.索引签名： 允许定义对象可以具有任意数量的属性，这些属性的键和类型是可变的， 常⽤于：描述类型不确定的属性，（具有动态属性的对象）。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 限制person对象必须有name属性，可选age属性但值必须是数字，同时可以有任意数</span></span><br><span class="line">量、任意类型的其他属性</span><br><span class="line"><span class="keyword">let</span> <span class="attr">person</span>: &#123;</span><br><span class="line"> <span class="attr">name</span>: <span class="built_in">string</span></span><br><span class="line"> <span class="attr">age</span>?: <span class="built_in">number</span></span><br><span class="line"> [<span class="attr">key</span>: <span class="built_in">string</span>]: <span class="built_in">any</span> <span class="comment">// 索引签名，完全可以不⽤key这个单词，换成其他的也可以</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 赋值合法</span></span><br><span class="line">person = &#123;</span><br><span class="line"> <span class="attr">name</span>:<span class="string">&#x27;张三&#x27;</span>,</span><br><span class="line"> <span class="attr">age</span>:<span class="number">18</span>,</span><br><span class="line"> <span class="attr">gender</span>:<span class="string">&#x27;男&#x27;</span> </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>声明函数类型</strong></p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">count</span>: <span class="function">(<span class="params"><span class="attr">a</span>: <span class="built_in">number</span>, <span class="attr">b</span>: <span class="built_in">number</span></span>) =&gt;</span> <span class="built_in">number</span></span><br><span class="line">count = <span class="keyword">function</span> (<span class="params">x, y</span>) &#123;</span><br><span class="line"> <span class="keyword">return</span> x + y </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//备注：</span></span><br><span class="line"><span class="comment">//TypeScript 中的 =&gt; 在函数类型声明时表示函数类型，描述其参数类型和返回类</span></span><br><span class="line"><span class="comment">//型。</span></span><br><span class="line"><span class="comment">//JavaScript 中的 =&gt; 是⼀种定义函数的语法，是具体的函数实现。</span></span><br><span class="line"><span class="comment">//函数类型声明还可以使⽤：接⼝、⾃定义类型等⽅式</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>声明数组类型</strong></p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">arr1</span>: <span class="built_in">string</span>[] </span><br><span class="line"><span class="keyword">let</span> <span class="attr">arr2</span>: <span class="title class_">Array</span>&lt;<span class="built_in">string</span>&gt;</span><br><span class="line">arr1 = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>]</span><br><span class="line">arr2 = [<span class="string">&#x27;hello&#x27;</span>,<span class="string">&#x27;world&#x27;</span>]</span><br><span class="line"><span class="comment">//上述代码中的 Array 属于泛型</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h3><p>元组 (Tuple) 是⼀种特殊的数组类型，可以存储固定数量的元素，并且每个元素的类型是已 知的且可以不同。元组⽤于精确描述⼀组值的类型， ? 表示可选元素。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第⼀个元素必须是 string 类型，第⼆个元素必须是 number 类型。</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">arr1</span>: [<span class="built_in">string</span>,<span class="built_in">number</span>]</span><br><span class="line"><span class="comment">// 第⼀个元素必须是 number 类型，第⼆个元素是可选的，如果存在，必须是 boolean 类型。</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">arr2</span>: [<span class="built_in">number</span>,<span class="built_in">boolean</span>?]</span><br><span class="line"><span class="comment">// 第⼀个元素必须是 number 类型，后⾯的元素可以是任意数量的 string 类型</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">arr3</span>: [<span class="built_in">number</span>,...<span class="built_in">string</span>[]]</span><br><span class="line"><span class="comment">// 可以赋值</span></span><br><span class="line">arr1 = [<span class="string">&#x27;hello&#x27;</span>,<span class="number">123</span>]</span><br><span class="line">arr2 = [<span class="number">100</span>,<span class="literal">false</span>]</span><br><span class="line">arr2 = [<span class="number">200</span>]</span><br><span class="line">arr3 = [<span class="number">100</span>,<span class="string">&#x27;hello&#x27;</span>,<span class="string">&#x27;world&#x27;</span>]</span><br><span class="line">arr3 = [<span class="number">100</span>]</span><br><span class="line"><span class="comment">// 不可以赋值，arr1声明时是两个元素，赋值的是三个</span></span><br><span class="line">arr1 = [<span class="string">&#x27;hello&#x27;</span>,<span class="number">123</span>,<span class="literal">false</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="enum"><a href="#enum" class="headerlink" title="enum"></a>enum</h3><p>枚举（ enum ）可以定义**⼀组命名常量**，它能增强代码的可读性，也让代码更好维护。</p>
+<p> 如下代码的功能是：根据调⽤ walk 时传⼊的不同参数，执⾏不同的逻辑，存在的问题是调⽤ walk 时传参时没有任何提示，编码者很容易写错字符串内容；并且⽤于判断逻辑的 up 、 down 、 left 、 right 是连续且相关的⼀组值，那此时就特别适合使⽤枚举（ enum ）</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">walk</span>(<span class="params"><span class="attr">str</span>:<span class="built_in">string</span></span>) &#123;</span><br><span class="line"> <span class="keyword">if</span> (str === <span class="string">&#x27;up&#x27;</span>) &#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;向【上】⾛&quot;</span>);</span><br><span class="line"> &#125; <span class="keyword">else</span> <span class="keyword">if</span> (str === <span class="string">&#x27;down&#x27;</span>) &#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;向【下】⾛&quot;</span>);</span><br><span class="line"> &#125; <span class="keyword">else</span> <span class="keyword">if</span> (str === <span class="string">&#x27;left&#x27;</span>) &#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;向【左】⾛&quot;</span>);</span><br><span class="line"> &#125; <span class="keyword">else</span> <span class="keyword">if</span> (str === <span class="string">&#x27;right&#x27;</span>) &#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;向【右】⾛&quot;</span>);</span><br><span class="line"> &#125; <span class="keyword">else</span> &#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;未知⽅向&quot;</span>);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">walk</span>(<span class="string">&#x27;up&#x27;</span>)</span><br><span class="line"><span class="title function_">walk</span>(<span class="string">&#x27;down&#x27;</span>)</span><br><span class="line"><span class="title function_">walk</span>(<span class="string">&#x27;left&#x27;</span>)</span><br><span class="line"><span class="title function_">walk</span>(<span class="string">&#x27;right&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>1.数字枚举</strong></p>
+<p>数字枚举⼀种最常⻅的枚举类型，其成员的值会⾃动递增，且数字枚举还具备反向映射的 特点，在下⾯代码的打印中，不难发现：可以通过值来获取对应的枚举成员名称 。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义⼀个描述【上下左右】⽅向的枚举Direction</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">Direction</span> &#123;</span><br><span class="line"> <span class="title class_">Up</span>,</span><br><span class="line"> <span class="title class_">Down</span>,</span><br><span class="line"> <span class="title class_">Left</span>,</span><br><span class="line"> <span class="title class_">Right</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Direction</span>) <span class="comment">// 打印Direction会看到如下内容</span></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> &#123;</span></span><br><span class="line"><span class="comment"> 0:&#x27;Up&#x27;, </span></span><br><span class="line"><span class="comment"> 1:&#x27;Down&#x27;, </span></span><br><span class="line"><span class="comment"> 2:&#x27;Left&#x27;, </span></span><br><span class="line"><span class="comment"> 3:&#x27;Right&#x27;, </span></span><br><span class="line"><span class="comment"> Up:0, </span></span><br><span class="line"><span class="comment"> Down:1, </span></span><br><span class="line"><span class="comment"> Left:2,</span></span><br><span class="line"><span class="comment"> Right:3</span></span><br><span class="line"><span class="comment"> &#125; </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">// 反向映射</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Direction</span>.<span class="property">Up</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Direction</span>[<span class="number">0</span>])</span><br><span class="line"><span class="comment">// 此⾏代码报错，枚举中的属性是只读的</span></span><br><span class="line"><span class="title class_">Direction</span>.<span class="property">Up</span> = <span class="string">&#x27;shang&#x27;</span></span><br><span class="line"><span class="comment">//也可以指定枚举成员的初始值，其后的成员值会⾃动递增</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">Direction</span> &#123;</span><br><span class="line"> <span class="title class_">Up</span> = <span class="number">6</span>,</span><br><span class="line"> <span class="title class_">Down</span>,</span><br><span class="line"> <span class="title class_">Left</span>,</span><br><span class="line"> <span class="title class_">Right</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Direction</span>.<span class="property">Up</span>); <span class="comment">// 输出: 6</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Direction</span>.<span class="property">Down</span>); <span class="comment">// 输出: 7</span></span><br><span class="line"><span class="comment">//使⽤数字枚举完成刚才 walk 函数中的逻辑，此时我们发现： 代码更加直观易读，⽽且类</span></span><br><span class="line"><span class="comment">//型安全，同时也更易于维护。</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">Direction</span> &#123;</span><br><span class="line"> <span class="title class_">Up</span>,</span><br><span class="line"> <span class="title class_">Down</span>,</span><br><span class="line"> <span class="title class_">Left</span>,</span><br><span class="line"> <span class="title class_">Right</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">walk</span>(<span class="params"><span class="attr">n</span>: <span class="title class_">Direction</span></span>) &#123;</span><br><span class="line"> <span class="keyword">if</span> (n === <span class="title class_">Direction</span>.<span class="property">Up</span>) &#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;向【上】⾛&quot;</span>);</span><br><span class="line"> &#125; <span class="keyword">else</span> <span class="keyword">if</span> (n === <span class="title class_">Direction</span>.<span class="property">Down</span>) &#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;向【下】⾛&quot;</span>);</span><br><span class="line"> &#125; <span class="keyword">else</span> <span class="keyword">if</span> (n === <span class="title class_">Direction</span>.<span class="property">Left</span>) &#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;向【左】⾛&quot;</span>);</span><br><span class="line"> &#125; <span class="keyword">else</span> <span class="keyword">if</span> (n === <span class="title class_">Direction</span>.<span class="property">Right</span>) &#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;向【右】⾛&quot;</span>);</span><br><span class="line"> &#125; <span class="keyword">else</span> &#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;未知⽅向&quot;</span>);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">walk</span>(<span class="title class_">Direction</span>.<span class="property">Up</span>)</span><br><span class="line"><span class="title function_">walk</span>(<span class="title class_">Direction</span>.<span class="property">Down</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>2.字符串枚举</strong></p>
+<p>枚举成员的值是字符串</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">Direction</span> &#123;</span><br><span class="line"> <span class="title class_">Up</span> = <span class="string">&quot;up&quot;</span>,</span><br><span class="line"> <span class="title class_">Down</span> = <span class="string">&quot;down&quot;</span>,</span><br><span class="line"> <span class="title class_">Left</span> = <span class="string">&quot;left&quot;</span>,</span><br><span class="line"> <span class="title class_">Right</span> = <span class="string">&quot;right&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> <span class="attr">dir</span>: <span class="title class_">Direction</span> = <span class="title class_">Direction</span>.<span class="property">Up</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(dir); <span class="comment">// 输出: &quot;up&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>3.<strong>常量枚举</strong></p>
+<p>官⽅描述：常量枚举是⼀种特殊枚举类型，它使⽤ const 关键字定义，在编译时会被 内联，避免⽣成⼀些额外的代码</p>
+<p>何为编译时内联？ 所谓“内联”其实就是 TypeScript 在编译时会将枚举成员引⽤替换为它们的实际值，而不是⽣成额外的枚举对象。这可以减少⽣成的 JavaScript 代码量，并提⾼运⾏时性能。 </p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使⽤普通枚举的 TypeScript 代码如下：</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">Directions</span> &#123;</span><br><span class="line"> <span class="title class_">Up</span>,</span><br><span class="line"> <span class="title class_">Down</span>,</span><br><span class="line"> <span class="title class_">Left</span>,</span><br><span class="line"> <span class="title class_">Right</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> x = <span class="title class_">Directions</span>.<span class="property">Up</span>;</span><br><span class="line"><span class="comment">//编译后⽣成的 JavaScript 代码量较⼤ ：</span></span><br><span class="line"><span class="meta">&quot;use strict&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> <span class="title class_">Directions</span>;</span><br><span class="line">(<span class="keyword">function</span> (<span class="params"><span class="title class_">Directions</span></span>) &#123;</span><br><span class="line"> <span class="title class_">Directions</span>[<span class="title class_">Directions</span>[<span class="string">&quot;Up&quot;</span>] = <span class="number">0</span>] = <span class="string">&quot;Up&quot;</span>;</span><br><span class="line"> <span class="title class_">Directions</span>[<span class="title class_">Directions</span>[<span class="string">&quot;Down&quot;</span>] = <span class="number">1</span>] = <span class="string">&quot;Down&quot;</span>;</span><br><span class="line"> <span class="title class_">Directions</span>[<span class="title class_">Directions</span>[<span class="string">&quot;Left&quot;</span>] = <span class="number">2</span>] = <span class="string">&quot;Left&quot;</span>;</span><br><span class="line"> <span class="title class_">Directions</span>[<span class="title class_">Directions</span>[<span class="string">&quot;Right&quot;</span>] = <span class="number">3</span>] = <span class="string">&quot;Right&quot;</span>;</span><br><span class="line">&#125;)(<span class="title class_">Directions</span> || (<span class="title class_">Directions</span> = &#123;&#125;));</span><br><span class="line"><span class="keyword">let</span> x = <span class="title class_">Directions</span>.<span class="property">Up</span>;</span><br><span class="line"><span class="comment">//使⽤常量枚举的 TypeScript 代码如下：</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">enum</span> <span class="title class_">Directions</span> &#123;</span><br><span class="line"> <span class="title class_">Up</span>,</span><br><span class="line"> <span class="title class_">Down</span>,</span><br><span class="line"> <span class="title class_">Left</span>,</span><br><span class="line"> <span class="title class_">Right</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> x = <span class="title class_">Directions</span>.<span class="property">Up</span>;</span><br><span class="line"><span class="comment">//编译后⽣成的 JavaScript 代码量较⼩：</span></span><br><span class="line"><span class="meta">&quot;use strict&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> x = <span class="number">0</span> <span class="comment">/* Directions.Up */</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="type"><a href="#type" class="headerlink" title="type"></a>type</h3><p>type 可以为任意类型创建别名，让代码更简洁、可读性更强，同时能更⽅便地进⾏类型复⽤和 扩展。</p>
+<p>基本⽤法:</p>
+<p>类型别名使⽤ type 关键字定义， type 后跟类型名称，例如下⾯代码中 num 是类型别名。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> num = <span class="built_in">number</span>;</span><br><span class="line"><span class="keyword">let</span> <span class="attr">price</span>: num</span><br><span class="line">price = <span class="number">100</span></span><br></pre></td></tr></table></figure>
+
+<p>联合类型是⼀种⾼级类型，它表示⼀个值可以是⼏种不同类型之⼀。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="title class_">Status</span> = <span class="built_in">number</span> | <span class="built_in">string</span></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">Gender</span> = <span class="string">&#x27;男&#x27;</span> | <span class="string">&#x27;⼥&#x27;</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">printStatus</span>(<span class="params"><span class="attr">status</span>: <span class="title class_">Status</span></span>) &#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(status);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">logGender</span>(<span class="params"><span class="attr">str</span>:<span class="title class_">Gender</span></span>)&#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(str)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">printStatus</span>(<span class="number">404</span>);</span><br><span class="line"><span class="title function_">printStatus</span>(<span class="string">&#x27;200&#x27;</span>);</span><br><span class="line"><span class="title function_">printStatus</span>(<span class="string">&#x27;501&#x27;</span>);</span><br><span class="line"><span class="title function_">logGender</span>(<span class="string">&#x27;男&#x27;</span>)</span><br><span class="line"><span class="title function_">logGender</span>(<span class="string">&#x27;⼥&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>交叉类型（Intersection Types）允许将多个类型合并为⼀个类型。合并后的类型将拥 有所有被合并类型的成员。交叉类型通常⽤于对象类型。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//⾯积</span></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">Area</span> = &#123;</span><br><span class="line"> <span class="attr">height</span>: <span class="built_in">number</span>; <span class="comment">//⾼</span></span><br><span class="line"> <span class="attr">width</span>: <span class="built_in">number</span>; <span class="comment">//宽</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//地址</span></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">Address</span> = &#123;</span><br><span class="line"> <span class="attr">num</span>: <span class="built_in">number</span>; <span class="comment">//楼号</span></span><br><span class="line"> <span class="attr">cell</span>: <span class="built_in">number</span>; <span class="comment">//单元号</span></span><br><span class="line"> <span class="attr">room</span>: <span class="built_in">string</span>; <span class="comment">//房间号</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 定义类型House，且House是Area和Address组成的交叉类型</span></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">House</span> = <span class="title class_">Area</span> &amp; <span class="title class_">Address</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="attr">house</span>: <span class="title class_">House</span> = &#123;</span><br><span class="line"> <span class="attr">height</span>: <span class="number">180</span>,</span><br><span class="line"> <span class="attr">width</span>: <span class="number">75</span>,</span><br><span class="line"> <span class="attr">num</span>: <span class="number">6</span>,</span><br><span class="line"> <span class="attr">cell</span>: <span class="number">3</span>,</span><br><span class="line"> <span class="attr">room</span>: <span class="string">&#x27;702&#x27;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://wuruiyii.github.io/2025/01/16/%E6%96%B0%E6%B5%81%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Wu Rui Yi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wuruiyi's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/01/16/%E6%96%B0%E6%B5%81%E7%A8%8B/" class="post-title-link" itemprop="url">新流程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2025-01-16 14:18:03 / Modified: 14:19:58" itemprop="dateCreated datePublished" datetime="2025-01-16T14:18:03+08:00">2025-01-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>GitHub Pages个人博客配置说明</p>
+<p><img src="/2025/01/16/%E6%96%B0%E6%B5%81%E7%A8%8B/image-20250116141912732.png" alt="image-20250116141912732"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://wuruiyii.github.io/2025/01/16/%E5%93%88%E5%93%88%E5%93%88%EF%BC%8C%E7%BB%88%E4%BA%8E%E6%88%90%E5%8A%9F%E4%BA%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Wu Rui Yi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wuruiyi's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/01/16/%E5%93%88%E5%93%88%E5%93%88%EF%BC%8C%E7%BB%88%E4%BA%8E%E6%88%90%E5%8A%9F%E4%BA%86/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2025-01-16 14:05:05 / Modified: 14:06:20" itemprop="dateCreated datePublished" datetime="2025-01-16T14:05:05+08:00">2025-01-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="/2025/01/16/%E5%93%88%E5%93%88%E5%93%88%EF%BC%8C%E7%BB%88%E4%BA%8E%E6%88%90%E5%8A%9F%E4%BA%86/08847c96f8d5106f4b4aeeed9f7f61b5.png" alt="在这里插入图片描述"></p>
+<p>历经磨难，终于成功！</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://wuruiyii.github.io/2025/01/16/testcpp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Wu Rui Yi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wuruiyi's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/01/16/testcpp/" class="post-title-link" itemprop="url">testcpp</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2025-01-16 12:52:33 / Modified: 13:57:02" itemprop="dateCreated datePublished" datetime="2025-01-16T12:52:33+08:00">2025-01-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="/2025/01/16/testcpp/cpp-17370069050992.png" alt="cpp"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://wuruiyii.github.io/2025/01/16/cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Wu Rui Yi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wuruiyi's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/01/16/cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/" class="post-title-link" itemprop="url">cpp相关语法知识</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2025-01-16 11:46:55 / Modified: 12:45:56" itemprop="dateCreated datePublished" datetime="2025-01-16T11:46:55+08:00">2025-01-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="cpp-language-语法"><a href="#cpp-language-语法" class="headerlink" title="cpp language 语法"></a>cpp language 语法</h1><h1 id="总览导航-思维导图"><a href="#总览导航-思维导图" class="headerlink" title="总览导航-思维导图"></a>总览导航-思维导图</h1><p><img src="/2025/01/16/cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/cpp.png" alt="cpp"></p>
+<h2 id="vector-动态数组"><a href="#vector-动态数组" class="headerlink" title="vector(动态数组)"></a>vector(动态数组)</h2><p>1.在使用vector时，要使用相应的头文件</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>2.创建数组</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">定义：vector&lt;数据类型&gt; v;</span><br><span class="line"></span><br><span class="line">v.<span class="built_in">resize</span>(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i= <span class="number">9</span>=<span class="number">0</span>;i &lt; <span class="number">10</span>;i++)</span><br><span class="line">    v[i] = i;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i =<span class="number">0</span>;i &lt; <span class="number">10</span>;i++)</span><br><span class="line">    cout&lt;&lt;v[i];</span><br><span class="line"></span><br><span class="line">cout&lt;&lt;v.<span class="built_in">size</span>()&lt;&lt;endl;<span class="comment">//10</span></span><br><span class="line"></span><br><span class="line">v.<span class="built_in">push_back</span>(<span class="number">10</span>);<span class="comment">//将10这个元素放在数组的最后，长度也会加一</span></span><br><span class="line"></span><br><span class="line">定义： <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v</span><span class="params">(<span class="number">10</span>,<span class="number">2</span>)</span></span>;<span class="comment">//创建十个元素空间，每一个元素初始化为2</span></span><br><span class="line">      <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v</span><span class="params">(<span class="number">10</span>)</span></span>; = vector&lt;<span class="type">int</span>&gt; <span class="built_in">v</span>(<span class="number">10</span>,<span class="number">0</span>);<span class="comment">//创建十个元素空间，每一个元素初始化为0</span></span><br></pre></td></tr></table></figure>
+
+<p>3.迭代器</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">box</span><span class="params">(<span class="number">10</span>,<span class="number">2</span>)</span></span>;</span><br><span class="line">	box.<span class="built_in">push_back</span>(<span class="number">11</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> p = box.<span class="built_in">begin</span>();p != box.<span class="built_in">end</span>();++p)</span><br><span class="line">	&#123;</span><br><span class="line">		cout&lt;&lt;*p&lt;&lt;<span class="string">&quot; &quot;</span>;<span class="comment">//*p 很重要，看好再写</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">打印结果：<span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">2</span> <span class="number">11</span></span><br><span class="line">    <span class="comment">//此时begin指向数组的第一个元素，end指向数组最后一个元素的后面的第一个位置（不在数组中了）</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="set-集合"><a href="#set-集合" class="headerlink" title="set(集合)"></a>set(集合)</h2><p>1.在使用set时，要使用相应的头文件</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;set&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>2.使用</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	set&lt;<span class="type">int</span>&gt; s;<span class="comment">//创建集合</span></span><br><span class="line">	s.<span class="built_in">insert</span>(<span class="number">2</span>);</span><br><span class="line">	s.<span class="built_in">insert</span>(<span class="number">1</span>);</span><br><span class="line">	s.<span class="built_in">insert</span>(<span class="number">3</span>);<span class="comment">//往集合中储存数据</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> p = s.<span class="built_in">begin</span>();p != s.<span class="built_in">end</span>();++p)</span><br><span class="line">	&#123;</span><br><span class="line">		cout&lt;&lt;*p&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">	&#125;   <span class="comment">//1 2 3</span></span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;(s.<span class="built_in">find</span>(<span class="number">2</span>) != s.<span class="built_in">end</span>())&lt;&lt;endl;<span class="comment">//set.find() 返回的是指针 1</span></span><br><span class="line">	cout&lt;&lt;(s.<span class="built_in">find</span>(<span class="number">4</span>) != s.<span class="built_in">end</span>())&lt;&lt;endl;<span class="comment">//0</span></span><br><span class="line">	s.<span class="built_in">erase</span>(<span class="number">1</span>);</span><br><span class="line">	cout&lt;&lt;(s.<span class="built_in">find</span>(<span class="number">1</span>) != s.<span class="built_in">end</span>())&lt;&lt;endl;<span class="comment">//0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>set中的元素会自动按照从小到大的顺序进行排序</p>
+<h2 id="map（键值对"><a href="#map（键值对" class="headerlink" title="map（键值对)"></a>map（键值对)</h2><p>1.在使用map时，要使用相应的头文件</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;map&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>2.使用</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    map&lt;string,<span class="type">int</span>&gt; mymap;<span class="comment">//定义键值对</span></span><br><span class="line">    mymap[<span class="string">&quot;hello&quot;</span>] = <span class="number">2</span>;</span><br><span class="line">    mymap[<span class="string">&quot;world&quot;</span>] = <span class="number">3</span>;</span><br><span class="line">    mymap[<span class="string">&quot;hallo&quot;</span>] = <span class="number">5</span>;<span class="comment">//输出根据ASCII码的顺序进行从小到大排列</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> p=mymap.<span class="built_in">begin</span>();p!= mymap.<span class="built_in">end</span>();++p)</span><br><span class="line">    cout&lt;&lt;p-&gt;first&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;p-&gt;second&lt;&lt;endl;  <span class="comment">//first指的是string，second指的是int</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line"> &#125; </span><br><span class="line"><span class="comment">//打印结果</span></span><br><span class="line">hallo : <span class="number">5</span></span><br><span class="line">hello : <span class="number">2</span></span><br><span class="line">world : <span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="stack（栈"><a href="#stack（栈" class="headerlink" title="stack（栈)"></a>stack（栈)</h2><p>1.在使用stack时，要使用相应的头文件</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stack&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>2.使用</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	stack&lt;<span class="type">int</span>&gt; mystack;</span><br><span class="line">	mystack.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">	mystack.<span class="built_in">push</span>(<span class="number">2</span>);</span><br><span class="line">	mystack.<span class="built_in">push</span>(<span class="number">3</span>);</span><br><span class="line">	mystack.<span class="built_in">pop</span>();<span class="comment">//弹出顶部元素，出栈</span></span><br><span class="line">	cout&lt;&lt;mystack.<span class="built_in">top</span>()&lt;&lt;endl;<span class="comment">//访问顶部元素</span></span><br><span class="line">	cout&lt;&lt;mystack.<span class="built_in">size</span>();<span class="comment">//大小</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line"> &#125; </span><br><span class="line"><span class="comment">//打印结果</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：栈不可以使用迭代器进行遍历，因为不存在begin和end</p>
+<h2 id="queue（队列"><a href="#queue（队列" class="headerlink" title="queue（队列)"></a>queue（队列)</h2><p>1.在使用queue时，要使用相应的头文件</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;queue&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>2.使用</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	queue&lt;<span class="type">int</span>&gt; my;<span class="comment">//定义，创建队列</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i =<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++)</span><br><span class="line">	 my.<span class="built_in">push</span>(i); <span class="comment">//入队列</span></span><br><span class="line">	 cout&lt;&lt;my.<span class="built_in">front</span>()&lt;&lt;endl;<span class="comment">//访问队首 1</span></span><br><span class="line">	 cout&lt;&lt;my.<span class="built_in">back</span>()&lt;&lt;endl;<span class="comment">//访问队尾 10</span></span><br><span class="line">	 my.<span class="built_in">pop</span>();</span><br><span class="line">	 cout&lt;&lt;my.<span class="built_in">front</span>()&lt;&lt;endl;<span class="comment">// 访问队首 2</span></span><br><span class="line">	  cout&lt;&lt;my.<span class="built_in">back</span>()&lt;&lt;endl;<span class="comment">//访问队尾 10</span></span><br><span class="line">	 <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="unordered-set-和-unordered-map"><a href="#unordered-set-和-unordered-map" class="headerlink" title="unordered_set 和 unordered_map"></a>unordered_set 和 unordered_map</h2><p>1.在使用时，要使用相应的头文件</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;unordered_set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;unordered_map&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>2.使用</p>
+<p>   如果对于对于排序没有相应的要求，可以使用这两个来减少复杂度，防止运行超时</p>
+<p> 注意：但是在输出的时候，尽管是无序的，但是却不是输入的顺序</p>
+<p><img src="/2025/01/16/cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/image-20250111204645805.png" alt="image-20250111204645805"></p>
+<h2 id="bitset（位运算）"><a href="#bitset（位运算）" class="headerlink" title="bitset（位运算）"></a>bitset（位运算）</h2><p>1.在使用时，要使用相应的头文件</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bitset&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>2.使用</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bitset&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">      <span class="function">bitset&lt;5&gt; <span class="title">b</span><span class="params">(<span class="number">19</span>)</span></span>; </span><br><span class="line">      cout&lt;&lt;b&lt;&lt;endl;<span class="comment">//10011</span></span><br><span class="line">      </span><br><span class="line">      <span class="function">bitset&lt;8&gt; <span class="title">c</span><span class="params">(<span class="string">&quot;111&quot;</span>)</span></span>;</span><br><span class="line">      cout&lt;&lt;c&lt;&lt;endl;<span class="comment">//00000111</span></span><br><span class="line">      </span><br><span class="line">      string  m = <span class="string">&quot;1111100101&quot;</span>;</span><br><span class="line">	  <span class="function">bitset&lt;5&gt; <span class="title">d</span><span class="params">(m,<span class="number">0</span>,<span class="number">5</span>)</span></span>; <span class="comment">//从m这个字符串中，下标为第0个元素开始 ，找长度为5个的位 </span></span><br><span class="line">	  cout&lt;&lt;d&lt;&lt;endl;  <span class="comment">//11111</span></span><br><span class="line">	  </span><br><span class="line">	  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; b.<span class="built_in">size</span>();i++)</span><br><span class="line">	   cout&lt;&lt;b[i];<span class="comment">//倒序输出，从最低位到最高位进行输出 11001</span></span><br><span class="line">	   </span><br><span class="line">	   cout&lt;&lt;endl; </span><br><span class="line">	   cout&lt;&lt;<span class="string">&quot;是否存在1：&quot;</span>&lt;&lt;b.<span class="built_in">any</span>()&lt;&lt;endl;<span class="comment">//证明是存在1的 </span></span><br><span class="line">	   </span><br><span class="line">	   cout &lt;&lt;<span class="string">&quot;是否不存在1：&quot;</span> &lt;&lt;b.<span class="built_in">none</span>()&lt;&lt;endl;<span class="comment">//证明是存在1的 </span></span><br><span class="line">	   </span><br><span class="line">	   cout&lt;&lt;<span class="string">&quot;1的个数为：&quot;</span>&lt;&lt;b.<span class="built_in">count</span>()&lt;&lt;endl; <span class="comment">//3</span></span><br><span class="line">	   </span><br><span class="line">	   cout&lt;&lt;<span class="string">&quot;b中元素的个数：&quot;</span>&lt;&lt;b.<span class="built_in">size</span>()&lt;&lt;endl;  <span class="comment">// 5</span></span><br><span class="line">	   cout&lt;&lt;<span class="string">&quot;下标为i的元素是不是1：&quot;</span>&lt;&lt;b.<span class="built_in">test</span>(<span class="number">1</span>)&lt;&lt;endl; <span class="comment">//下标为1的元素是1</span></span><br><span class="line">	   </span><br><span class="line">	   b.<span class="built_in">flip</span>(<span class="number">1</span>);<span class="comment">//将元素b[1]位置上的元素进行取反</span></span><br><span class="line">	   </span><br><span class="line">	   cout&lt;&lt;b&lt;&lt;endl; <span class="comment">//10001</span></span><br><span class="line">	   </span><br><span class="line">	   <span class="type">unsigned</span> <span class="type">long</span> a = b.<span class="built_in">to_ulong</span>(); <span class="comment">//转换成数字 </span></span><br><span class="line">	   cout&lt;&lt;a&lt;&lt;endl; <span class="comment">// 17</span></span><br><span class="line">	  <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="sort（排序）"><a href="#sort（排序）" class="headerlink" title="sort（排序）"></a>sort（排序）</h2><p>1.在使用时，要使用相应的头文件</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>2.使用</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">      vector &lt;<span class="type">int</span>&gt; <span class="built_in">vv</span>(<span class="number">10</span>);   <span class="comment">//定义数组 </span></span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">10</span>;i &gt;= <span class="number">1</span>;i--)</span><br><span class="line">       vv[<span class="number">10</span>-i] = i;      <span class="comment">//初始化数组 </span></span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">10</span>;i++)</span><br><span class="line">       cout&lt;&lt;vv[i]&lt;&lt;<span class="string">&quot; &quot;</span>;<span class="comment">//输出数组   10 9 8 7 6 5 4 3 2 1</span></span><br><span class="line">       cout&lt;&lt;endl; </span><br><span class="line">       </span><br><span class="line">       <span class="built_in">sort</span>(vv.<span class="built_in">begin</span>(),vv.<span class="built_in">end</span>());<span class="comment">//排序 </span></span><br><span class="line">       </span><br><span class="line">       <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">10</span>;i++)</span><br><span class="line">       cout&lt;&lt;vv[i]&lt;&lt;<span class="string">&quot; &quot;</span>;<span class="comment">//输出数组  1 2 3 4 5 6 7 8 9 10</span></span><br><span class="line">      </span><br><span class="line">	  <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.cmp自定义函数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(<span class="type">int</span> m,<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> m&gt;n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">      vector &lt;<span class="type">int</span>&gt; vv;   <span class="comment">//定义数组 </span></span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>;i &lt;= <span class="number">10</span>;i++)</span><br><span class="line">       vv.<span class="built_in">push_back</span> (i);      <span class="comment">//初始化数组 </span></span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">10</span>;i++)</span><br><span class="line">       cout&lt;&lt;vv[i]&lt;&lt;<span class="string">&quot; &quot;</span>;<span class="comment">//输出数组   1 2 3 4 5 6 7 8 9 10</span></span><br><span class="line">       cout&lt;&lt;endl; </span><br><span class="line">       </span><br><span class="line">       <span class="built_in">sort</span>(vv.<span class="built_in">begin</span>(),vv.<span class="built_in">end</span>(),cmp);<span class="comment">//排序 ,加入自定义函数，让排序按照固定函数的方式进行排序 </span></span><br><span class="line">       </span><br><span class="line">       <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">10</span>;i++)</span><br><span class="line">       cout&lt;&lt;vv[i]&lt;&lt;<span class="string">&quot; &quot;</span>;<span class="comment">//输出数组  10 9 8 7 6 5 4 3 2 1 </span></span><br><span class="line">      </span><br><span class="line">	  <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：在自定义函数中，只允许使用&gt; , &lt; ，不允许使用 &lt;&#x3D; ,&gt;&#x3D;</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">stu</span>&#123;</span><br><span class="line">	string name;</span><br><span class="line">	<span class="type">int</span> age;</span><br><span class="line">&#125;; </span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(stu a,stu b)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(a.age != b.age)  <span class="comment">//如果年龄不同，则由小到大进行排列</span></span><br><span class="line">	<span class="keyword">return</span> a.age &lt; b.age;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	<span class="keyword">return</span> a.name &lt; b.name; <span class="comment">//如果年龄相同，则根据ASCII码进行排序</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">      stu s[<span class="number">3</span>];</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">3</span>;i++)</span><br><span class="line">      &#123;</span><br><span class="line">      	cin&gt;&gt;s[i].age&gt;&gt;s[i].name;</span><br><span class="line">	  &#125;</span><br><span class="line">      <span class="built_in">sort</span>(s,s<span class="number">+3</span>,cmp);</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; <span class="number">3</span>;i++)</span><br><span class="line">      &#123;</span><br><span class="line">      cout&lt;&lt;s[i].name&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;s[i].age&lt;&lt;endl;</span><br><span class="line">	  &#125;</span><br><span class="line">	  <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="cctype头文件"><a href="#cctype头文件" class="headerlink" title="cctype头文件"></a>cctype头文件</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">     <span class="type">char</span> s = <span class="string">&#x27;A&#x27;</span>;</span><br><span class="line">     cout&lt;&lt;<span class="built_in">isalpha</span>(s)&lt;&lt;endl;<span class="comment">//1 是否是字母 </span></span><br><span class="line">     cout&lt;&lt;<span class="built_in">islower</span>(s)&lt;&lt;endl;<span class="comment">//0 是否是小写字母 </span></span><br><span class="line">     cout&lt;&lt;<span class="built_in">isupper</span>(s)&lt;&lt;endl;<span class="comment">//1 是否是大写字母 </span></span><br><span class="line">     cout&lt;&lt;<span class="built_in">isalnum</span>(s)&lt;&lt;endl;<span class="comment">//1 是否是字母或者数字 </span></span><br><span class="line">     cout&lt;&lt;<span class="built_in">isspace</span>(s)&lt;&lt;endl;<span class="comment">//0  是否是空格，\t \n  \r</span></span><br><span class="line">     </span><br><span class="line">     <span class="type">char</span> s1 = <span class="built_in">tolower</span>(s);</span><br><span class="line">     cout&lt;&lt;s1&lt;&lt;endl; <span class="comment">//a</span></span><br><span class="line">     <span class="type">char</span> s2 = <span class="built_in">toupper</span>(s);</span><br><span class="line">     cout&lt;&lt;s2&lt;&lt;endl; <span class="comment">//A</span></span><br><span class="line">     </span><br><span class="line">     </span><br><span class="line">	  <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="cpp11特性"><a href="#cpp11特性" class="headerlink" title="cpp11特性"></a>cpp11特性</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">     <span class="keyword">auto</span> a = <span class="number">10</span>;</span><br><span class="line">     cout&lt;&lt;a&lt;&lt;endl; </span><br><span class="line">     <span class="keyword">auto</span> x =<span class="string">&quot;hello&quot;</span>;</span><br><span class="line">     cout&lt;&lt;x&lt;&lt;endl;</span><br><span class="line">	  <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：在使用auto时，必须对变量进行初始化</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span> </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">v</span><span class="params">(<span class="number">5</span>,<span class="number">2</span>)</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> a:v)</span><br><span class="line">    cout&lt;&lt;a&lt;&lt;<span class="string">&quot; &quot;</span>; <span class="comment">// 2 2 2 2 2</span></span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> &amp;b:v) <span class="comment">//取地址可以对值进行更改</span></span><br><span class="line">      b++;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> c:v)</span><br><span class="line">      cout&lt;&lt;c&lt;&lt;<span class="string">&quot; &quot;</span>; <span class="comment">// 3 3 3 3 3</span></span><br><span class="line">    </span><br><span class="line">	  <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    string s = <span class="built_in">to_string</span>(<span class="number">123</span>);  <span class="comment">//转换成为字符类型 </span></span><br><span class="line">    cout&lt;&lt;s&lt;&lt;endl;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>,s.<span class="built_in">c_str</span>());</span><br><span class="line">     <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">	  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> s = <span class="built_in">stoi</span>(<span class="string">&quot;123&quot;</span>);</span><br><span class="line">	cout&lt;&lt;s<span class="number">-1</span>&lt;&lt;endl; <span class="comment">//122</span></span><br><span class="line">	<span class="type">double</span> s1 = <span class="built_in">stod</span>(<span class="string">&quot;12.34&quot;</span>); </span><br><span class="line">	cout&lt;&lt;s1<span class="number">-1</span>; <span class="comment">//11.34</span></span><br><span class="line">	  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/01/16/cpp%E7%9B%B8%E5%85%B3%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://wuruiyii.github.io/2025/01/16/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Wu Rui Yi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wuruiyi's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/01/16/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2025-01-16 11:40:44" itemprop="dateCreated datePublished" datetime="2025-01-16T11:40:44+08:00">2025-01-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-07-29 21:57:21" itemprop="dateModified" datetime="2025-07-29T21:57:21+08:00">2025-07-29</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>Hello World！</p>
+<p>Welcome to the code world！</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Wu Rui Yi</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wu Rui Yi</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
